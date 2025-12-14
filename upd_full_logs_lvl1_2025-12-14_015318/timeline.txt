@@ -1,0 +1,22 @@
+timestamp=2025-12-14T01:53:18+03:00 start app
+timestamp=2025-12-14T01:53:18+03:00 app pid=1101786
+timestamp=2025-12-14T01:53:18+03:00 sysstat monitors (cpu/threads basics) started
+timestamp=2025-12-14T01:53:18+03:00 thread monitors started
+timestamp=2025-12-14T01:53:18+03:00 system metrics monitors (mem/io) started
+timestamp=2025-12-14T01:53:18+03:00 load generator pid=1101845
+timestamp=2025-12-14T01:56:18+03:00 load start (ramped rps schedule) method=GET
+timestamp=2025-12-14T01:56:18+03:00 load stage start label=rps_1 rps=1 duration_sec=180
+timestamp=2025-12-14T01:59:22+03:00 load stage end label=rps_1 rps=1
+timestamp=2025-12-14T01:59:22+03:00 load stage start label=rps_6 rps=6 duration_sec=180
+timestamp=2025-12-14T02:02:26+03:00 load stage end label=rps_6 rps=6
+timestamp=2025-12-14T02:02:26+03:00 load stage start label=rps_11 rps=11 duration_sec=180
+timestamp=2025-12-14T02:05:29+03:00 load stage end label=rps_11 rps=11
+timestamp=2025-12-14T02:05:29+03:00 load stage start label=rps_16 rps=16 duration_sec=180
+timestamp=2025-12-14T02:08:34+03:00 load stage end label=rps_16 rps=16
+timestamp=2025-12-14T02:08:34+03:00 load stage start label=rps_21 rps=21 duration_sec=180
+timestamp=2025-12-14T02:11:37+03:00 load stage end label=rps_21 rps=21
+timestamp=2025-12-14T02:11:37+03:00 load stage start label=rps_21_hold rps=21 duration_sec=180
+timestamp=2025-12-14T02:14:41+03:00 load stage end label=rps_21_hold rps=21
+timestamp=2025-12-14T02:14:41+03:00 load cooldown start duration_sec=300
+timestamp=2025-12-14T02:19:18+03:00 duration reached, exiting
+timestamp=2025-12-14T02:19:18+03:00 cleanup: stopping monitors/load/app

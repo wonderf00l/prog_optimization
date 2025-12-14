@@ -1,0 +1,11 @@
+GET http://localhost:8080/
+User-Agent: vegeta-test
+X-Test-Header1: value1
+X-Test-Header2: value2
+
+POST http://localhost:8080/
+Content-Type: application/json
+User-Agent: vegeta-test
+X-Test-Header1: value1
+X-Test-Header2: value2
+@post_body.json
