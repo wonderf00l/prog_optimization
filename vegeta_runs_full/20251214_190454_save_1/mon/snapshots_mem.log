@@ -1,0 +1,2810 @@
+# started_at=2025-12-14T19:04:55+03:00
+# periodic snapshots: free -h and /proc/meminfo (head)
+
+### ts=2025-12-14T19:04:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.8Gi        23Gi        28Mi       3.0Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24457232 kB
+MemAvailable:   27176968 kB
+Buffers:          205988 kB
+Cached:          2829528 kB
+SwapCached:            0 kB
+Active:          1086164 kB
+Inactive:        5157608 kB
+Active(anon):      16896 kB
+Inactive(anon):  3226620 kB
+Active(file):    1069268 kB
+Inactive(file):  1930988 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              9372 kB
+Writeback:             0 kB
+AnonPages:       3125208 kB
+Mapped:          1176688 kB
+Shmem:             29012 kB
+KReclaimable:     159192 kB
+Slab:             285492 kB
+SReclaimable:     159192 kB
+SUnreclaim:       126300 kB
+KernelStack:       18304 kB
+PageTables:        36652 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.9Gi        23Gi        27Mi       3.1Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24350524 kB
+MemAvailable:   27114884 kB
+Buffers:          206892 kB
+Cached:          2869176 kB
+SwapCached:            0 kB
+Active:          1129528 kB
+Inactive:        5206712 kB
+Active(anon):      16456 kB
+Inactive(anon):  3276704 kB
+Active(file):    1113072 kB
+Inactive(file):  1930008 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             12852 kB
+Writeback:             0 kB
+AnonPages:       3178880 kB
+Mapped:          1190284 kB
+Shmem:             27908 kB
+KReclaimable:     162792 kB
+Slab:             289308 kB
+SReclaimable:     162792 kB
+SUnreclaim:       126516 kB
+KernelStack:       17584 kB
+PageTables:        37836 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.7Gi        23Gi        24Mi       3.1Gi        26Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24522356 kB
+MemAvailable:   27290332 kB
+Buffers:          207440 kB
+Cached:          2869720 kB
+SwapCached:            0 kB
+Active:          1133004 kB
+Inactive:        5037300 kB
+Active(anon):      16540 kB
+Inactive(anon):  3107188 kB
+Active(file):    1116464 kB
+Inactive(file):  1930112 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             12092 kB
+Writeback:           120 kB
+AnonPages:       3006136 kB
+Mapped:          1195248 kB
+Shmem:             25504 kB
+KReclaimable:     163028 kB
+Slab:             289612 kB
+SReclaimable:     163028 kB
+SUnreclaim:       126584 kB
+KernelStack:       17568 kB
+PageTables:        38576 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.7Gi        23Gi        24Mi       3.1Gi        26Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24523780 kB
+MemAvailable:   27293556 kB
+Buffers:          207704 kB
+Cached:          2871244 kB
+SwapCached:            0 kB
+Active:          1133916 kB
+Inactive:        5048008 kB
+Active(anon):      16496 kB
+Inactive(anon):  3117072 kB
+Active(file):    1117420 kB
+Inactive(file):  1930936 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             22956 kB
+Writeback:             0 kB
+AnonPages:       3016136 kB
+Mapped:          1195624 kB
+Shmem:             25504 kB
+KReclaimable:     163072 kB
+Slab:             289492 kB
+SReclaimable:     163072 kB
+SUnreclaim:       126420 kB
+KernelStack:       17648 kB
+PageTables:        37868 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.7Gi        23Gi        24Mi       3.1Gi        26Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24525080 kB
+MemAvailable:   27295880 kB
+Buffers:          207948 kB
+Cached:          2872012 kB
+SwapCached:            0 kB
+Active:          1134424 kB
+Inactive:        5034096 kB
+Active(anon):      16544 kB
+Inactive(anon):  3102608 kB
+Active(file):    1117880 kB
+Inactive(file):  1931488 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              9416 kB
+Writeback:             0 kB
+AnonPages:       3001136 kB
+Mapped:          1195492 kB
+Shmem:             25504 kB
+KReclaimable:     163096 kB
+Slab:             290160 kB
+SReclaimable:     163096 kB
+SUnreclaim:       127064 kB
+KernelStack:       17616 kB
+PageTables:        37936 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.8Gi        23Gi        24Mi       3.1Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24379352 kB
+MemAvailable:   27180060 kB
+Buffers:          209200 kB
+Cached:          2900140 kB
+SwapCached:            0 kB
+Active:          1176556 kB
+Inactive:        5132908 kB
+Active(anon):      20636 kB
+Inactive(anon):  3210080 kB
+Active(file):    1155920 kB
+Inactive(file):  1922828 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             19212 kB
+Writeback:             0 kB
+AnonPages:       3093788 kB
+Mapped:          1222696 kB
+Shmem:             25512 kB
+KReclaimable:     164152 kB
+Slab:             291768 kB
+SReclaimable:     164152 kB
+SUnreclaim:       127616 kB
+KernelStack:       18272 kB
+PageTables:        39160 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:05:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.8Gi        23Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24213800 kB
+MemAvailable:   27188260 kB
+Buffers:          209664 kB
+Cached:          3072104 kB
+SwapCached:            0 kB
+Active:          1178992 kB
+Inactive:        5286976 kB
+Active(anon):      20832 kB
+Inactive(anon):  3193984 kB
+Active(file):    1158160 kB
+Inactive(file):  2092992 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             90556 kB
+Writeback:             0 kB
+AnonPages:       3073188 kB
+Mapped:          1221044 kB
+Shmem:             25508 kB
+KReclaimable:     166848 kB
+Slab:             294180 kB
+SReclaimable:     166848 kB
+SUnreclaim:       127332 kB
+KernelStack:       18080 kB
+PageTables:        38684 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.8Gi        23Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24185960 kB
+MemAvailable:   27176728 kB
+Buffers:          209908 kB
+Cached:          3088084 kB
+SwapCached:            0 kB
+Active:          1185956 kB
+Inactive:        5312384 kB
+Active(anon):      26996 kB
+Inactive(anon):  3203960 kB
+Active(file):    1158960 kB
+Inactive(file):  2108424 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             16776 kB
+Writeback:            12 kB
+AnonPages:       3089140 kB
+Mapped:          1221296 kB
+Shmem:             25520 kB
+KReclaimable:     167000 kB
+Slab:             294696 kB
+SReclaimable:     167000 kB
+SUnreclaim:       127696 kB
+KernelStack:       18404 kB
+PageTables:        39340 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.9Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24106968 kB
+MemAvailable:   27114072 kB
+Buffers:          210716 kB
+Cached:          3103316 kB
+SwapCached:            0 kB
+Active:          1203860 kB
+Inactive:        5380140 kB
+Active(anon):      29044 kB
+Inactive(anon):  3271516 kB
+Active(file):    1174816 kB
+Inactive(file):  2108624 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             24060 kB
+Writeback:             0 kB
+AnonPages:       3145772 kB
+Mapped:          1223968 kB
+Shmem:             25512 kB
+KReclaimable:     167560 kB
+Slab:             295156 kB
+SReclaimable:     167560 kB
+SUnreclaim:       127596 kB
+KernelStack:       18456 kB
+PageTables:        38944 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       4.9Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24057040 kB
+MemAvailable:   27067276 kB
+Buffers:          211816 kB
+Cached:          3104868 kB
+SwapCached:            0 kB
+Active:          1264412 kB
+Inactive:        5355200 kB
+Active(anon):      29064 kB
+Inactive(anon):  3304472 kB
+Active(file):    1235348 kB
+Inactive(file):  2050728 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             16972 kB
+Writeback:             0 kB
+AnonPages:       3169588 kB
+Mapped:          1231684 kB
+Shmem:             25528 kB
+KReclaimable:     168552 kB
+Slab:             296612 kB
+SReclaimable:     168552 kB
+SUnreclaim:       128060 kB
+KernelStack:       18776 kB
+PageTables:        39556 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.0Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24001036 kB
+MemAvailable:   27018288 kB
+Buffers:          212284 kB
+Cached:          3111120 kB
+SwapCached:            0 kB
+Active:          1265524 kB
+Inactive:        5423784 kB
+Active(anon):      29144 kB
+Inactive(anon):  3367356 kB
+Active(file):    1236380 kB
+Inactive(file):  2056428 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             17996 kB
+Writeback:            60 kB
+AnonPages:       3235736 kB
+Mapped:          1231812 kB
+Shmem:             25516 kB
+KReclaimable:     169116 kB
+Slab:             297400 kB
+SReclaimable:     169116 kB
+SUnreclaim:       128284 kB
+KernelStack:       18800 kB
+PageTables:        39920 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.0Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23960748 kB
+MemAvailable:   26983628 kB
+Buffers:          212756 kB
+Cached:          3116196 kB
+SwapCached:            0 kB
+Active:          1268424 kB
+Inactive:        5457180 kB
+Active(anon):      31272 kB
+Inactive(anon):  3395984 kB
+Active(file):    1237152 kB
+Inactive(file):  2061196 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             23188 kB
+Writeback:             0 kB
+AnonPages:       3262888 kB
+Mapped:          1232904 kB
+Shmem:             25524 kB
+KReclaimable:     169292 kB
+Slab:             296824 kB
+SReclaimable:     169292 kB
+SUnreclaim:       127532 kB
+KernelStack:       19116 kB
+PageTables:        40272 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:06:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.0Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        24017588 kB
+MemAvailable:   27046964 kB
+Buffers:          213324 kB
+Cached:          3122024 kB
+SwapCached:            0 kB
+Active:          1269820 kB
+Inactive:        5402588 kB
+Active(anon):      31140 kB
+Inactive(anon):  3336544 kB
+Active(file):    1238680 kB
+Inactive(file):  2066044 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             11320 kB
+Writeback:             0 kB
+AnonPages:       3208088 kB
+Mapped:          1232320 kB
+Shmem:             25516 kB
+KReclaimable:     169536 kB
+Slab:             297220 kB
+SReclaimable:     169536 kB
+SUnreclaim:       127684 kB
+KernelStack:       18996 kB
+PageTables:        40472 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.0Gi        22Gi        24Mi       3.3Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23929364 kB
+MemAvailable:   26963384 kB
+Buffers:          213612 kB
+Cached:          3126308 kB
+SwapCached:            0 kB
+Active:          1270400 kB
+Inactive:        5480252 kB
+Active(anon):      31240 kB
+Inactive(anon):  3410092 kB
+Active(file):    1239160 kB
+Inactive(file):  2070160 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             22416 kB
+Writeback:            48 kB
+AnonPages:       3281652 kB
+Mapped:          1231404 kB
+Shmem:             25516 kB
+KReclaimable:     169632 kB
+Slab:             297296 kB
+SReclaimable:     169632 kB
+SUnreclaim:       127664 kB
+KernelStack:       18888 kB
+PageTables:        40432 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.1Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23858892 kB
+MemAvailable:   26898304 kB
+Buffers:          214144 kB
+Cached:          3131004 kB
+SwapCached:            0 kB
+Active:          1271240 kB
+Inactive:        5552816 kB
+Active(anon):      31256 kB
+Inactive(anon):  3478248 kB
+Active(file):    1239984 kB
+Inactive(file):  2074568 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             26212 kB
+Writeback:             0 kB
+AnonPages:       3347972 kB
+Mapped:          1232348 kB
+Shmem:             25516 kB
+KReclaimable:     169948 kB
+Slab:             297640 kB
+SReclaimable:     169948 kB
+SUnreclaim:       127692 kB
+KernelStack:       18848 kB
+PageTables:        40364 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.2Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23775988 kB
+MemAvailable:   26821324 kB
+Buffers:          214724 kB
+Cached:          3136620 kB
+SwapCached:            0 kB
+Active:          1272164 kB
+Inactive:        5630884 kB
+Active(anon):      31328 kB
+Inactive(anon):  3551268 kB
+Active(file):    1240836 kB
+Inactive(file):  2079616 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             10748 kB
+Writeback:             0 kB
+AnonPages:       3421516 kB
+Mapped:          1231644 kB
+Shmem:             25516 kB
+KReclaimable:     170000 kB
+Slab:             298016 kB
+SReclaimable:     170000 kB
+SUnreclaim:       128016 kB
+KernelStack:       18892 kB
+PageTables:        40452 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.2Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23703860 kB
+MemAvailable:   26755316 kB
+Buffers:          215116 kB
+Cached:          3141988 kB
+SwapCached:            0 kB
+Active:          1272800 kB
+Inactive:        5711848 kB
+Active(anon):      31280 kB
+Inactive(anon):  3626864 kB
+Active(file):    1241520 kB
+Inactive(file):  2084984 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             22424 kB
+Writeback:             0 kB
+AnonPages:       3497268 kB
+Mapped:          1232244 kB
+Shmem:             25516 kB
+KReclaimable:     170136 kB
+Slab:             298188 kB
+SReclaimable:     170136 kB
+SUnreclaim:       128052 kB
+KernelStack:       18956 kB
+PageTables:        40964 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.3Gi        22Gi        27Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23581776 kB
+MemAvailable:   26639060 kB
+Buffers:          215488 kB
+Cached:          3150508 kB
+SwapCached:            0 kB
+Active:          1274404 kB
+Inactive:        5828592 kB
+Active(anon):      31168 kB
+Inactive(anon):  3739568 kB
+Active(file):    1243236 kB
+Inactive(file):  2089024 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             26000 kB
+Writeback:             4 kB
+AnonPages:       3607340 kB
+Mapped:          1232244 kB
+Shmem:             28652 kB
+KReclaimable:     170276 kB
+Slab:             298192 kB
+SReclaimable:     170276 kB
+SUnreclaim:       127916 kB
+KernelStack:       18816 kB
+PageTables:        40828 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:07:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.4Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23516100 kB
+MemAvailable:   26580116 kB
+Buffers:          215980 kB
+Cached:          3153496 kB
+SwapCached:            0 kB
+Active:          1277756 kB
+Inactive:        5895204 kB
+Active(anon):      33456 kB
+Inactive(anon):  3800624 kB
+Active(file):    1244300 kB
+Inactive(file):  2094580 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             11520 kB
+Writeback:            24 kB
+AnonPages:       3673680 kB
+Mapped:          1232556 kB
+Shmem:             25516 kB
+KReclaimable:     170504 kB
+Slab:             299576 kB
+SReclaimable:     170504 kB
+SUnreclaim:       129072 kB
+KernelStack:       18880 kB
+PageTables:        43036 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.5Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23429344 kB
+MemAvailable:   26499496 kB
+Buffers:          216532 kB
+Cached:          3159032 kB
+SwapCached:            0 kB
+Active:          1278292 kB
+Inactive:        5980356 kB
+Active(anon):      33372 kB
+Inactive(anon):  3880336 kB
+Active(file):    1244920 kB
+Inactive(file):  2100020 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             23176 kB
+Writeback:             0 kB
+AnonPages:       3753924 kB
+Mapped:          1231752 kB
+Shmem:             25516 kB
+KReclaimable:     170656 kB
+Slab:             298580 kB
+SReclaimable:     170656 kB
+SUnreclaim:       127924 kB
+KernelStack:       18816 kB
+PageTables:        41312 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.6Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23337716 kB
+MemAvailable:   26413516 kB
+Buffers:          217024 kB
+Cached:          3164076 kB
+SwapCached:            0 kB
+Active:          1279144 kB
+Inactive:        6064312 kB
+Active(anon):      33364 kB
+Inactive(anon):  3959604 kB
+Active(file):    1245780 kB
+Inactive(file):  2104708 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             27184 kB
+Writeback:             4 kB
+AnonPages:       3832652 kB
+Mapped:          1231828 kB
+Shmem:             25516 kB
+KReclaimable:     170856 kB
+Slab:             298940 kB
+SReclaimable:     170856 kB
+SUnreclaim:       128084 kB
+KernelStack:       18736 kB
+PageTables:        41356 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.6Gi        22Gi        24Mi       3.4Gi        25Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23297828 kB
+MemAvailable:   26379608 kB
+Buffers:          217464 kB
+Cached:          3169536 kB
+SwapCached:            0 kB
+Active:          1286780 kB
+Inactive:        6102708 kB
+Active(anon):      33316 kB
+Inactive(anon):  3999768 kB
+Active(file):    1253464 kB
+Inactive(file):  2102940 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             13504 kB
+Writeback:             0 kB
+AnonPages:       3873848 kB
+Mapped:          1224948 kB
+Shmem:             25516 kB
+KReclaimable:     170980 kB
+Slab:             299096 kB
+SReclaimable:     170980 kB
+SUnreclaim:       128116 kB
+KernelStack:       18632 kB
+PageTables:        41592 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       5.8Gi        21Gi        24Mi       3.4Gi        24Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        23030836 kB
+MemAvailable:   26123544 kB
+Buffers:          218144 kB
+Cached:          3179616 kB
+SwapCached:            0 kB
+Active:          1341692 kB
+Inactive:        6304312 kB
+Active(anon):      33376 kB
+Inactive(anon):  4245500 kB
+Active(file):    1308316 kB
+Inactive(file):  2058812 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             21860 kB
+Writeback:             0 kB
+AnonPages:       4115180 kB
+Mapped:          1232996 kB
+Shmem:             25524 kB
+KReclaimable:     171392 kB
+Slab:             299684 kB
+SReclaimable:     171392 kB
+SUnreclaim:       128292 kB
+KernelStack:       18976 kB
+PageTables:        42412 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       6.0Gi        21Gi        24Mi       3.4Gi        24Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        22824728 kB
+MemAvailable:   25931372 kB
+Buffers:          219040 kB
+Cached:          3192432 kB
+SwapCached:            0 kB
+Active:          1342948 kB
+Inactive:        6505000 kB
+Active(anon):      33368 kB
+Inactive(anon):  4433708 kB
+Active(file):    1309580 kB
+Inactive(file):  2071292 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             37612 kB
+Writeback:             0 kB
+AnonPages:       4314180 kB
+Mapped:          1231996 kB
+Shmem:             25516 kB
+KReclaimable:     171776 kB
+Slab:             299840 kB
+SReclaimable:     171776 kB
+SUnreclaim:       128064 kB
+KernelStack:       18784 kB
+PageTables:        42348 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:08:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       6.2Gi        21Gi        24Mi       3.4Gi        24Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        22629496 kB
+MemAvailable:   25748832 kB
+Buffers:          219956 kB
+Cached:          3203972 kB
+SwapCached:            0 kB
+Active:          1346168 kB
+Inactive:        6711720 kB
+Active(anon):      35432 kB
+Inactive(anon):  4629132 kB
+Active(file):    1310736 kB
+Inactive(file):  2082588 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             15456 kB
+Writeback:             0 kB
+AnonPages:       4511192 kB
+Mapped:          1233140 kB
+Shmem:             25524 kB
+KReclaimable:     172256 kB
+Slab:             301832 kB
+SReclaimable:     172256 kB
+SUnreclaim:       129576 kB
+KernelStack:       18864 kB
+PageTables:        43252 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       6.3Gi        21Gi        24Mi       3.4Gi        24Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        22457488 kB
+MemAvailable:   25589304 kB
+Buffers:          220628 kB
+Cached:          3215640 kB
+SwapCached:            0 kB
+Active:          1347856 kB
+Inactive:        6880484 kB
+Active(anon):      35412 kB
+Inactive(anon):  4787256 kB
+Active(file):    1312444 kB
+Inactive(file):  2093228 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             32596 kB
+Writeback:             0 kB
+AnonPages:       4673540 kB
+Mapped:          1231532 kB
+Shmem:             25516 kB
+KReclaimable:     172520 kB
+Slab:             301752 kB
+SReclaimable:     172520 kB
+SUnreclaim:       129232 kB
+KernelStack:       18592 kB
+PageTables:        43072 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       6.6Gi        21Gi        24Mi       3.5Gi        24Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        22183452 kB
+MemAvailable:   25328092 kB
+Buffers:          221356 kB
+Cached:          3227616 kB
+SwapCached:            0 kB
+Active:          1348944 kB
+Inactive:        7136028 kB
+Active(anon):      35616 kB
+Inactive(anon):  5031044 kB
+Active(file):    1313328 kB
+Inactive(file):  2104984 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             30048 kB
+Writeback:            40 kB
+AnonPages:       4910908 kB
+Mapped:          1232628 kB
+Shmem:             25524 kB
+KReclaimable:     172884 kB
+Slab:             301932 kB
+SReclaimable:     172884 kB
+SUnreclaim:       129048 kB
+KernelStack:       18816 kB
+PageTables:        44072 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       6.8Gi        20Gi        24Mi       3.5Gi        23Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        21971480 kB
+MemAvailable:   25128656 kB
+Buffers:          222180 kB
+Cached:          3239096 kB
+SwapCached:            0 kB
+Active:          1350012 kB
+Inactive:        7352376 kB
+Active(anon):      35452 kB
+Inactive(anon):  5236256 kB
+Active(file):    1314560 kB
+Inactive(file):  2116120 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             18276 kB
+Writeback:            12 kB
+AnonPages:       5120912 kB
+Mapped:          1232000 kB
+Shmem:             25516 kB
+KReclaimable:     173220 kB
+Slab:             302952 kB
+SReclaimable:     173220 kB
+SUnreclaim:       129732 kB
+KernelStack:       18560 kB
+PageTables:        43900 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       7.0Gi        20Gi        24Mi       3.5Gi        23Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        21722952 kB
+MemAvailable:   24892696 kB
+Buffers:          223100 kB
+Cached:          3250584 kB
+SwapCached:            0 kB
+Active:          1351068 kB
+Inactive:        7603648 kB
+Active(anon):      35476 kB
+Inactive(anon):  5476180 kB
+Active(file):    1315592 kB
+Inactive(file):  2127468 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             35932 kB
+Writeback:             0 kB
+AnonPages:       5357660 kB
+Mapped:          1232652 kB
+Shmem:             25528 kB
+KReclaimable:     173596 kB
+Slab:             302896 kB
+SReclaimable:     173596 kB
+SUnreclaim:       129300 kB
+KernelStack:       18984 kB
+PageTables:        44960 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       7.2Gi        20Gi        24Mi       3.5Gi        23Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        21525668 kB
+MemAvailable:   24708624 kB
+Buffers:          223956 kB
+Cached:          3262772 kB
+SwapCached:            0 kB
+Active:          1352068 kB
+Inactive:        7803352 kB
+Active(anon):      35484 kB
+Inactive(anon):  5663836 kB
+Active(file):    1316584 kB
+Inactive(file):  2139516 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             24124 kB
+Writeback:            24 kB
+AnonPages:       5552132 kB
+Mapped:          1231484 kB
+Shmem:             25516 kB
+KReclaimable:     173940 kB
+Slab:             302968 kB
+SReclaimable:     173940 kB
+SUnreclaim:       129028 kB
+KernelStack:       18668 kB
+PageTables:        44480 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:09:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       7.3Gi        20Gi        24Mi       3.5Gi        23Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        21382736 kB
+MemAvailable:   24578816 kB
+Buffers:          224944 kB
+Cached:          3274684 kB
+SwapCached:            0 kB
+Active:          1353636 kB
+Inactive:        7958532 kB
+Active(anon):      35452 kB
+Inactive(anon):  5807684 kB
+Active(file):    1318184 kB
+Inactive(file):  2150848 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             14124 kB
+Writeback:             0 kB
+AnonPages:       5695844 kB
+Mapped:          1231216 kB
+Shmem:             25516 kB
+KReclaimable:     174324 kB
+Slab:             304296 kB
+SReclaimable:     174324 kB
+SUnreclaim:       129972 kB
+KernelStack:       18592 kB
+PageTables:        44936 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       7.5Gi        20Gi        24Mi       3.5Gi        23Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        21123608 kB
+MemAvailable:   24334100 kB
+Buffers:          225760 kB
+Cached:          3288140 kB
+SwapCached:            0 kB
+Active:          1454172 kB
+Inactive:        8085480 kB
+Active(anon):      35476 kB
+Inactive(anon):  6020908 kB
+Active(file):    1418696 kB
+Inactive(file):  2064572 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             36524 kB
+Writeback:             0 kB
+AnonPages:       5908404 kB
+Mapped:          1231536 kB
+Shmem:             25516 kB
+KReclaimable:     174680 kB
+Slab:             303936 kB
+SReclaimable:     174680 kB
+SUnreclaim:       129256 kB
+KernelStack:       18496 kB
+PageTables:        45432 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       7.9Gi        19Gi        24Mi       3.5Gi        22Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        20732744 kB
+MemAvailable:   23968436 kB
+Buffers:          227248 kB
+Cached:          3311496 kB
+SwapCached:            0 kB
+Active:          1455708 kB
+Inactive:        8478896 kB
+Active(anon):      35428 kB
+Inactive(anon):  6391076 kB
+Active(file):    1420280 kB
+Inactive(file):  2087820 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             34228 kB
+Writeback:            20 kB
+AnonPages:       6278684 kB
+Mapped:          1231844 kB
+Shmem:             25516 kB
+KReclaimable:     175412 kB
+Slab:             304956 kB
+SReclaimable:     175412 kB
+SUnreclaim:       129544 kB
+KernelStack:       18560 kB
+PageTables:        46232 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:25+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       8.3Gi        19Gi        24Mi       3.6Gi        22Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        20270096 kB
+MemAvailable:   23531072 kB
+Buffers:          228824 kB
+Cached:          3334800 kB
+SwapCached:            0 kB
+Active:          1457740 kB
+Inactive:        8937092 kB
+Active(anon):      35556 kB
+Inactive(anon):  6826256 kB
+Active(file):    1422184 kB
+Inactive(file):  2110836 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             40100 kB
+Writeback:             0 kB
+AnonPages:       6714000 kB
+Mapped:          1232212 kB
+Shmem:             25516 kB
+KReclaimable:     176140 kB
+Slab:             305812 kB
+SReclaimable:     176140 kB
+SUnreclaim:       129672 kB
+KernelStack:       18636 kB
+PageTables:        46936 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       8.7Gi        18Gi        24Mi       3.6Gi        22Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        19807012 kB
+MemAvailable:   23092140 kB
+Buffers:          230016 kB
+Cached:          3357728 kB
+SwapCached:            0 kB
+Active:          1458892 kB
+Inactive:        9408172 kB
+Active(anon):      35516 kB
+Inactive(anon):  7274700 kB
+Active(file):    1423376 kB
+Inactive(file):  2133472 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             63548 kB
+Writeback:             0 kB
+AnonPages:       7161072 kB
+Mapped:          1232764 kB
+Shmem:             25516 kB
+KReclaimable:     176792 kB
+Slab:             306456 kB
+SReclaimable:     176792 kB
+SUnreclaim:       129664 kB
+KernelStack:       18592 kB
+PageTables:        47836 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:45+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       9.1Gi        18Gi        24Mi       3.6Gi        21Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        19345124 kB
+MemAvailable:   22654452 kB
+Buffers:          231428 kB
+Cached:          3379912 kB
+SwapCached:            0 kB
+Active:          1461932 kB
+Inactive:        9853288 kB
+Active(anon):      35500 kB
+Inactive(anon):  7699016 kB
+Active(file):    1426432 kB
+Inactive(file):  2154272 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             39528 kB
+Writeback:            64 kB
+AnonPages:       7585532 kB
+Mapped:          1235060 kB
+Shmem:             25516 kB
+KReclaimable:     177480 kB
+Slab:             307384 kB
+SReclaimable:     177480 kB
+SUnreclaim:       129904 kB
+KernelStack:       18624 kB
+PageTables:        48748 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:10:55+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       9.5Gi        18Gi        24Mi       3.6Gi        21Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        18908340 kB
+MemAvailable:   22242588 kB
+Buffers:          232800 kB
+Cached:          3403076 kB
+SwapCached:            0 kB
+Active:          1464172 kB
+Inactive:       10299004 kB
+Active(anon):      35696 kB
+Inactive(anon):  8122204 kB
+Active(file):    1428476 kB
+Inactive(file):  2176800 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             18292 kB
+Writeback:             0 kB
+AnonPages:       8009600 kB
+Mapped:          1232072 kB
+Shmem:             25516 kB
+KReclaimable:     178172 kB
+Slab:             309392 kB
+SReclaimable:     178172 kB
+SUnreclaim:       131220 kB
+KernelStack:       18628 kB
+PageTables:        49864 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:05+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       9.8Gi        17Gi        24Mi       3.7Gi        20Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        18600192 kB
+MemAvailable:   21958804 kB
+Buffers:          234048 kB
+Cached:          3425860 kB
+SwapCached:            0 kB
+Active:          1466080 kB
+Inactive:       10601940 kB
+Active(anon):      35548 kB
+Inactive(anon):  8403156 kB
+Active(file):    1430532 kB
+Inactive(file):  2198784 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             47464 kB
+Writeback:             0 kB
+AnonPages:       8289320 kB
+Mapped:          1230400 kB
+Shmem:             25512 kB
+KReclaimable:     178820 kB
+Slab:             309324 kB
+SReclaimable:     178820 kB
+SUnreclaim:       130504 kB
+KernelStack:       18576 kB
+PageTables:        49952 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:15+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        10Gi        17Gi        24Mi       3.7Gi        20Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        18162772 kB
+MemAvailable:   21546500 kB
+Buffers:          235468 kB
+Cached:          3449280 kB
+SwapCached:            0 kB
+Active:          1467636 kB
+Inactive:       11022200 kB
+Active(anon):      35496 kB
+Inactive(anon):  8800240 kB
+Active(file):    1432140 kB
+Inactive(file):  2221960 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             46672 kB
+Writeback:             4 kB
+AnonPages:       8686188 kB
+Mapped:          1229728 kB
+Shmem:             25512 kB
+KReclaimable:     179488 kB
+Slab:             309644 kB
+SReclaimable:     179488 kB
+SUnreclaim:       130156 kB
+KernelStack:       18592 kB
+PageTables:        50372 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:26+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        10Gi        16Gi        24Mi       3.7Gi        20Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        17747520 kB
+MemAvailable:   21155372 kB
+Buffers:          236796 kB
+Cached:          3471700 kB
+SwapCached:            0 kB
+Active:          1469368 kB
+Inactive:       11432724 kB
+Active(anon):      35544 kB
+Inactive(anon):  9188660 kB
+Active(file):    1433824 kB
+Inactive(file):  2244064 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             27352 kB
+Writeback:             0 kB
+AnonPages:       9075184 kB
+Mapped:          1230432 kB
+Shmem:             25512 kB
+KReclaimable:     180160 kB
+Slab:             310472 kB
+SReclaimable:     180160 kB
+SUnreclaim:       130312 kB
+KernelStack:       18608 kB
+PageTables:        51504 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:36+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        10Gi        16Gi        24Mi       3.7Gi        20Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        17557980 kB
+MemAvailable:   20981288 kB
+Buffers:          237708 kB
+Cached:          3486028 kB
+SwapCached:            0 kB
+Active:          1660956 kB
+Inactive:       11441456 kB
+Active(anon):      35512 kB
+Inactive(anon):  9373772 kB
+Active(file):    1625444 kB
+Inactive(file):  2067684 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             47680 kB
+Writeback:           320 kB
+AnonPages:       9263324 kB
+Mapped:          1230612 kB
+Shmem:             25512 kB
+KReclaimable:     180588 kB
+Slab:             310584 kB
+SReclaimable:     180588 kB
+SUnreclaim:       129996 kB
+KernelStack:       18272 kB
+PageTables:        51868 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:46+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        11Gi        16Gi        24Mi       3.8Gi        19Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        16961648 kB
+MemAvailable:   20412256 kB
+Buffers:          239156 kB
+Cached:          3511128 kB
+SwapCached:            0 kB
+Active:          1670044 kB
+Inactive:       12025472 kB
+Active(anon):      35680 kB
+Inactive(anon):  9940160 kB
+Active(file):    1634364 kB
+Inactive(file):  2085312 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             50304 kB
+Writeback:             0 kB
+AnonPages:       9816416 kB
+Mapped:          1231148 kB
+Shmem:             25520 kB
+KReclaimable:     182092 kB
+Slab:             313940 kB
+SReclaimable:     182092 kB
+SUnreclaim:       131848 kB
+KernelStack:       18816 kB
+PageTables:        53464 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:11:56+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        11Gi        15Gi        24Mi       3.8Gi        18Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        16297156 kB
+MemAvailable:   19785604 kB
+Buffers:          241108 kB
+Cached:          3546536 kB
+SwapCached:            0 kB
+Active:          1672372 kB
+Inactive:       12686232 kB
+Active(anon):      35592 kB
+Inactive(anon): 10565960 kB
+Active(file):    1636780 kB
+Inactive(file):  2120272 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             20984 kB
+Writeback:             0 kB
+AnonPages:      10443852 kB
+Mapped:          1229760 kB
+Shmem:             25512 kB
+KReclaimable:     183020 kB
+Slab:             315956 kB
+SReclaimable:     183020 kB
+SUnreclaim:       132936 kB
+KernelStack:       18560 kB
+PageTables:        53784 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:06+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        12Gi        14Gi        24Mi       3.8Gi        18Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        15558848 kB
+MemAvailable:   19084052 kB
+Buffers:          243276 kB
+Cached:          3581012 kB
+SwapCached:            0 kB
+Active:          1674532 kB
+Inactive:       13412272 kB
+Active(anon):      35508 kB
+Inactive(anon): 11258012 kB
+Active(file):    1639024 kB
+Inactive(file):  2154260 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             62024 kB
+Writeback:           120 kB
+AnonPages:      11127740 kB
+Mapped:          1230580 kB
+Shmem:             25524 kB
+KReclaimable:     184068 kB
+Slab:             316120 kB
+SReclaimable:     184068 kB
+SUnreclaim:       132052 kB
+KernelStack:       19004 kB
+PageTables:        56144 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:16+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        13Gi        14Gi        24Mi       3.9Gi        17Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        14883244 kB
+MemAvailable:   18445504 kB
+Buffers:          245516 kB
+Cached:          3615004 kB
+SwapCached:            0 kB
+Active:          1676908 kB
+Inactive:       14083320 kB
+Active(anon):      35512 kB
+Inactive(anon): 11894844 kB
+Active(file):    1641396 kB
+Inactive(file):  2188476 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            102304 kB
+Writeback:            20 kB
+AnonPages:      11770668 kB
+Mapped:          1245788 kB
+Shmem:             25512 kB
+KReclaimable:     185008 kB
+Slab:             317232 kB
+SReclaimable:     185008 kB
+SUnreclaim:       132224 kB
+KernelStack:       18620 kB
+PageTables:        56816 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:26+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        13Gi        13Gi        24Mi       3.9Gi        16Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        14198324 kB
+MemAvailable:   17797912 kB
+Buffers:          247812 kB
+Cached:          3649532 kB
+SwapCached:            0 kB
+Active:          1679456 kB
+Inactive:       14762392 kB
+Active(anon):      35592 kB
+Inactive(anon): 12539544 kB
+Active(file):    1643864 kB
+Inactive(file):  2222848 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             18776 kB
+Writeback:            16 kB
+AnonPages:      12411044 kB
+Mapped:          1231560 kB
+Shmem:             25512 kB
+KReclaimable:     185984 kB
+Slab:             318024 kB
+SReclaimable:     185984 kB
+SUnreclaim:       132040 kB
+KernelStack:       18832 kB
+PageTables:        58552 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:36+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        14Gi        13Gi        24Mi       3.9Gi        16Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        13786388 kB
+MemAvailable:   17423512 kB
+Buffers:          249748 kB
+Cached:          3684520 kB
+SwapCached:            0 kB
+Active:          1681676 kB
+Inactive:       15168272 kB
+Active(anon):      35568 kB
+Inactive(anon): 12910724 kB
+Active(file):    1646108 kB
+Inactive(file):  2257548 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             59044 kB
+Writeback:             0 kB
+AnonPages:      12786240 kB
+Mapped:          1230012 kB
+Shmem:             25512 kB
+KReclaimable:     187168 kB
+Slab:             319208 kB
+SReclaimable:     187168 kB
+SUnreclaim:       132040 kB
+KernelStack:       18576 kB
+PageTables:        58656 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:46+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        14Gi        12Gi        24Mi       4.0Gi        16Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        13186532 kB
+MemAvailable:   16861048 kB
+Buffers:          252140 kB
+Cached:          3719036 kB
+SwapCached:            0 kB
+Active:          1684232 kB
+Inactive:       15778260 kB
+Active(anon):      35568 kB
+Inactive(anon): 13486356 kB
+Active(file):    1648664 kB
+Inactive(file):  2291904 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             98704 kB
+Writeback:             8 kB
+AnonPages:      13361156 kB
+Mapped:          1230428 kB
+Shmem:             25512 kB
+KReclaimable:     188128 kB
+Slab:             320732 kB
+SReclaimable:     188128 kB
+SUnreclaim:       132604 kB
+KernelStack:       18564 kB
+PageTables:        59972 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:12:56+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        15Gi        11Gi        24Mi       4.0Gi        15Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        12562912 kB
+MemAvailable:   16273160 kB
+Buffers:          254264 kB
+Cached:          3752092 kB
+SwapCached:            0 kB
+Active:          1687176 kB
+Inactive:       16393144 kB
+Active(anon):      35592 kB
+Inactive(anon): 14068964 kB
+Active(file):    1651584 kB
+Inactive(file):  2324180 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             19216 kB
+Writeback:            28 kB
+AnonPages:      13943500 kB
+Mapped:          1230832 kB
+Shmem:             25512 kB
+KReclaimable:     189196 kB
+Slab:             322156 kB
+SReclaimable:     189196 kB
+SUnreclaim:       132960 kB
+KernelStack:       18636 kB
+PageTables:        61536 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:06+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        15Gi        11Gi        24Mi       4.0Gi        14Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        11946864 kB
+MemAvailable:   15693080 kB
+Buffers:          256120 kB
+Cached:          3785724 kB
+SwapCached:            0 kB
+Active:          1689164 kB
+Inactive:       17008716 kB
+Active(anon):      35580 kB
+Inactive(anon): 14651060 kB
+Active(file):    1653584 kB
+Inactive(file):  2357656 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             58620 kB
+Writeback:             0 kB
+AnonPages:      14526204 kB
+Mapped:          1230800 kB
+Shmem:             25512 kB
+KReclaimable:     190184 kB
+Slab:             322952 kB
+SReclaimable:     190184 kB
+SUnreclaim:       132768 kB
+KernelStack:       18804 kB
+PageTables:        62732 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:16+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        15Gi        11Gi        24Mi       4.0Gi        14Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        11841524 kB
+MemAvailable:   15598788 kB
+Buffers:          256672 kB
+Cached:          3796104 kB
+SwapCached:            0 kB
+Active:          1987652 kB
+Inactive:       16814268 kB
+Active(anon):      35508 kB
+Inactive(anon): 14744228 kB
+Active(file):    1952144 kB
+Inactive(file):  2070040 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             75936 kB
+Writeback:             0 kB
+AnonPages:      14633068 kB
+Mapped:          1229020 kB
+Shmem:             25512 kB
+KReclaimable:     190392 kB
+Slab:             322656 kB
+SReclaimable:     190392 kB
+SUnreclaim:       132264 kB
+KernelStack:       18332 kB
+PageTables:        62232 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:26+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        16Gi        10Gi        24Mi       4.1Gi        14Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        11170900 kB
+MemAvailable:   14960956 kB
+Buffers:          258536 kB
+Cached:          3826940 kB
+SwapCached:            0 kB
+Active:          1989560 kB
+Inactive:       17471420 kB
+Active(anon):      35612 kB
+Inactive(anon): 15370796 kB
+Active(file):    1953948 kB
+Inactive(file):  2100624 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             39360 kB
+Writeback:             4 kB
+AnonPages:      15257732 kB
+Mapped:          1230928 kB
+Shmem:             25512 kB
+KReclaimable:     191196 kB
+Slab:             323196 kB
+SReclaimable:     191196 kB
+SUnreclaim:       132000 kB
+KernelStack:       18668 kB
+PageTables:        63844 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:36+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        17Gi       9.8Gi        24Mi       4.1Gi        13Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:        10235112 kB
+MemAvailable:   14073184 kB
+Buffers:          261216 kB
+Cached:          3871664 kB
+SwapCached:            0 kB
+Active:          1992388 kB
+Inactive:       18405192 kB
+Active(anon):      35568 kB
+Inactive(anon): 16260088 kB
+Active(file):    1956820 kB
+Inactive(file):  2145104 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             89988 kB
+Writeback:             8 kB
+AnonPages:      16145984 kB
+Mapped:          1230012 kB
+Shmem:             25512 kB
+KReclaimable:     192528 kB
+Slab:             324784 kB
+SReclaimable:     192528 kB
+SUnreclaim:       132256 kB
+KernelStack:       18624 kB
+PageTables:        65180 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:46+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        18Gi       8.9Gi        24Mi       4.2Gi        12Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         9328024 kB
+MemAvailable:   13214876 kB
+Buffers:          263904 kB
+Cached:          3916752 kB
+SwapCached:            0 kB
+Active:          1995268 kB
+Inactive:       19307052 kB
+Active(anon):      35532 kB
+Inactive(anon): 17116772 kB
+Active(file):    1959736 kB
+Inactive(file):  2190280 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            133984 kB
+Writeback:             4 kB
+AnonPages:      17002220 kB
+Mapped:          1230876 kB
+Shmem:             25512 kB
+KReclaimable:     193904 kB
+Slab:             326332 kB
+SReclaimable:     193904 kB
+SUnreclaim:       132428 kB
+KernelStack:       18672 kB
+PageTables:        66712 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:13:56+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        19Gi       8.0Gi        24Mi       4.2Gi        11Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         8362188 kB
+MemAvailable:   12298552 kB
+Buffers:          266216 kB
+Cached:          3963172 kB
+SwapCached:            0 kB
+Active:          1997916 kB
+Inactive:       20260488 kB
+Active(anon):      35580 kB
+Inactive(anon): 18024360 kB
+Active(file):    1962336 kB
+Inactive(file):  2236128 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             23464 kB
+Writeback:             0 kB
+AnonPages:      17898168 kB
+Mapped:          1231820 kB
+Shmem:             25512 kB
+KReclaimable:     196032 kB
+Slab:             332372 kB
+SReclaimable:     196032 kB
+SUnreclaim:       136340 kB
+KernelStack:       18860 kB
+PageTables:        69404 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:06+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        19Gi       7.1Gi        24Mi       4.3Gi        10Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         7463708 kB
+MemAvailable:   11449428 kB
+Buffers:          268616 kB
+Cached:          4009196 kB
+SwapCached:            0 kB
+Active:          2000532 kB
+Inactive:       21153392 kB
+Active(anon):      35564 kB
+Inactive(anon): 18871180 kB
+Active(file):    1964968 kB
+Inactive(file):  2282212 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             75576 kB
+Writeback:             0 kB
+AnonPages:      18743344 kB
+Mapped:          1230176 kB
+Shmem:             25512 kB
+KReclaimable:     197308 kB
+Slab:             332464 kB
+SReclaimable:     197308 kB
+SUnreclaim:       135156 kB
+KernelStack:       18876 kB
+PageTables:        70284 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:16+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        20Gi       6.3Gi        24Mi       4.3Gi        10Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         6558188 kB
+MemAvailable:   10591972 kB
+Buffers:          271528 kB
+Cached:          4054200 kB
+SwapCached:            0 kB
+Active:          2003564 kB
+Inactive:       22042168 kB
+Active(anon):      35628 kB
+Inactive(anon): 19715560 kB
+Active(file):    1967936 kB
+Inactive(file):  2326608 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            126468 kB
+Writeback:             0 kB
+AnonPages:      19577568 kB
+Mapped:          1230076 kB
+Shmem:             25512 kB
+KReclaimable:     198708 kB
+Slab:             333480 kB
+SReclaimable:     198708 kB
+SUnreclaim:       134772 kB
+KernelStack:       18908 kB
+PageTables:        72092 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:26+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        21Gi       5.4Gi        24Mi       4.4Gi       9.3Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         5650768 kB
+MemAvailable:    9734040 kB
+Buffers:          273960 kB
+Cached:          4099812 kB
+SwapCached:            0 kB
+Active:          2006316 kB
+Inactive:       22944724 kB
+Active(anon):      35640 kB
+Inactive(anon): 20572272 kB
+Active(file):    1970676 kB
+Inactive(file):  2372452 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             30812 kB
+Writeback:            28 kB
+AnonPages:      20434256 kB
+Mapped:          1230688 kB
+Shmem:             25512 kB
+KReclaimable:     200004 kB
+Slab:             334924 kB
+SReclaimable:     200004 kB
+SUnreclaim:       134920 kB
+KernelStack:       18732 kB
+PageTables:        73372 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:36+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        21Gi       4.9Gi        24Mi       4.4Gi       8.8Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         5091412 kB
+MemAvailable:    9226440 kB
+Buffers:          277040 kB
+Cached:          4146344 kB
+SwapCached:            0 kB
+Active:          2010076 kB
+Inactive:       23512808 kB
+Active(anon):      35548 kB
+Inactive(anon): 21094676 kB
+Active(file):    1974528 kB
+Inactive(file):  2418132 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             68248 kB
+Writeback:             0 kB
+AnonPages:      20950524 kB
+Mapped:          1236280 kB
+Shmem:             25520 kB
+KReclaimable:     202228 kB
+Slab:             337440 kB
+SReclaimable:     202228 kB
+SUnreclaim:       135212 kB
+KernelStack:       18992 kB
+PageTables:        75416 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:46+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        22Gi       4.1Gi        24Mi       4.5Gi       8.1Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         4327404 kB
+MemAvailable:    8511108 kB
+Buffers:          279528 kB
+Cached:          4191184 kB
+SwapCached:            0 kB
+Active:          2012816 kB
+Inactive:       24260016 kB
+Active(anon):      35636 kB
+Inactive(anon): 21797076 kB
+Active(file):    1977180 kB
+Inactive(file):  2462940 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            119972 kB
+Writeback:             0 kB
+AnonPages:      21658828 kB
+Mapped:          1230800 kB
+Shmem:             25512 kB
+KReclaimable:     203444 kB
+Slab:             338480 kB
+SReclaimable:     203444 kB
+SUnreclaim:       135036 kB
+KernelStack:       18812 kB
+PageTables:        76448 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:14:56+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        22Gi       4.0Gi        24Mi       4.5Gi       8.0Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         4162184 kB
+MemAvailable:    8361808 kB
+Buffers:          280556 kB
+Cached:          4205920 kB
+SwapCached:            0 kB
+Active:          2245008 kB
+Inactive:       24191524 kB
+Active(anon):      35484 kB
+Inactive(anon): 21945172 kB
+Active(file):    2209524 kB
+Inactive(file):  2246352 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              9228 kB
+Writeback:             0 kB
+AnonPages:      21832568 kB
+Mapped:          1229920 kB
+Shmem:             25516 kB
+KReclaimable:     203608 kB
+Slab:             338524 kB
+SReclaimable:     203608 kB
+SUnreclaim:       134916 kB
+KernelStack:       18380 kB
+PageTables:        75960 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:06+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        23Gi       3.4Gi        24Mi       4.5Gi       7.4Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         3517724 kB
+MemAvailable:    7780852 kB
+Buffers:          285616 kB
+Cached:          4261000 kB
+SwapCached:            0 kB
+Active:          2434784 kB
+Inactive:       24642128 kB
+Active(anon):      35500 kB
+Inactive(anon): 22525432 kB
+Active(file):    2399284 kB
+Inactive(file):  2116696 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             48900 kB
+Writeback:             0 kB
+AnonPages:      22409824 kB
+Mapped:          1232704 kB
+Shmem:             25512 kB
+KReclaimable:     207008 kB
+Slab:             342124 kB
+SReclaimable:     207008 kB
+SUnreclaim:       135116 kB
+KernelStack:       18672 kB
+PageTables:        77388 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:16+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        24Gi       1.8Gi        24Mi       4.6Gi       5.9Gi
+Swap:          979Mi          0B       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:         1837836 kB
+MemAvailable:    6199200 kB
+Buffers:          290536 kB
+Cached:          4351772 kB
+SwapCached:            0 kB
+Active:          2439784 kB
+Inactive:       26309552 kB
+Active(anon):      35568 kB
+Inactive(anon): 24102092 kB
+Active(file):    2404216 kB
+Inactive(file):  2207460 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003516 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            143824 kB
+Writeback:             0 kB
+AnonPages:      23985460 kB
+Mapped:          1233284 kB
+Shmem:             25512 kB
+KReclaimable:     209548 kB
+Slab:             344788 kB
+SReclaimable:     209548 kB
+SUnreclaim:       135240 kB
+KernelStack:       18800 kB
+PageTables:        80756 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:27+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        26Gi       260Mi        27Mi       4.6Gi       4.4Gi
+Swap:          979Mi       512Ki       979Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          264388 kB
+MemAvailable:    4639220 kB
+Buffers:          290196 kB
+Cached:          4382908 kB
+SwapCached:          128 kB
+Active:          2432724 kB
+Inactive:       27994100 kB
+Active(anon):      36520 kB
+Inactive(anon): 25750732 kB
+Active(file):    2396204 kB
+Inactive(file):  2243368 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:        1003004 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:            169272 kB
+Writeback:         11816 kB
+AnonPages:      25631772 kB
+Mapped:          1230028 kB
+Shmem:             28408 kB
+KReclaimable:     190748 kB
+Slab:             330540 kB
+SReclaimable:     190748 kB
+SUnreclaim:       139792 kB
+KernelStack:       19024 kB
+PageTables:        84256 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:37+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        27Gi       639Mi        21Mi       3.4Gi       3.6Gi
+Swap:          979Mi       7.2Mi       972Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          655212 kB
+MemAvailable:    3760424 kB
+Buffers:          251476 kB
+Cached:          3149700 kB
+SwapCached:         2084 kB
+Active:          1927464 kB
+Inactive:       28319588 kB
+Active(anon):      51696 kB
+Inactive(anon): 26821200 kB
+Active(file):    1875768 kB
+Inactive(file):  1498388 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         996092 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             28076 kB
+Writeback:             0 kB
+AnonPages:      26725600 kB
+Mapped:          1174964 kB
+Shmem:             21884 kB
+KReclaimable:     182344 kB
+Slab:             320080 kB
+SReclaimable:     182344 kB
+SUnreclaim:       137736 kB
+KernelStack:       19152 kB
+PageTables:        85772 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:47+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        27Gi       495Mi        18Mi       3.5Gi       3.5Gi
+Swap:          979Mi       7.2Mi       972Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          502928 kB
+MemAvailable:    3651008 kB
+Buffers:          252604 kB
+Cached:          3188592 kB
+SwapCached:         2120 kB
+Active:          2206536 kB
+Inactive:       28199820 kB
+Active(anon):      51772 kB
+Inactive(anon): 26937596 kB
+Active(file):    2154764 kB
+Inactive(file):  1262224 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         996092 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             38324 kB
+Writeback:            12 kB
+AnonPages:      26840836 kB
+Mapped:          1180552 kB
+Shmem:             18696 kB
+KReclaimable:     182416 kB
+Slab:             319700 kB
+SReclaimable:     182416 kB
+SUnreclaim:       137284 kB
+KernelStack:       19464 kB
+PageTables:        86600 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:15:57+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        27Gi       253Mi        18Mi       3.1Gi       2.9Gi
+Swap:          979Mi       7.5Mi       972Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          259256 kB
+MemAvailable:    3059652 kB
+Buffers:          228780 kB
+Cached:          2868208 kB
+SwapCached:          100 kB
+Active:          2027952 kB
+Inactive:       28657996 kB
+Active(anon):      51864 kB
+Inactive(anon): 27561220 kB
+Active(file):    1976088 kB
+Inactive(file):  1096776 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         995836 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             16704 kB
+Writeback:            40 kB
+AnonPages:      27460660 kB
+Mapped:          1112572 kB
+Shmem:             18668 kB
+KReclaimable:     175296 kB
+Slab:             312632 kB
+SReclaimable:     175296 kB
+SUnreclaim:       137336 kB
+KernelStack:       19504 kB
+PageTables:        87540 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:07+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        28Gi       259Mi        18Mi       2.5Gi       2.3Gi
+Swap:          979Mi       8.0Mi       971Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          264052 kB
+MemAvailable:    2415444 kB
+Buffers:          134240 kB
+Cached:          2321188 kB
+SwapCached:           72 kB
+Active:          1721756 kB
+Inactive:       28971396 kB
+Active(anon):      51940 kB
+Inactive(anon): 28209880 kB
+Active(file):    1669816 kB
+Inactive(file):   761516 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         995324 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             20412 kB
+Writeback:             0 kB
+AnonPages:      28109724 kB
+Mapped:          1032212 kB
+Shmem:             18568 kB
+KReclaimable:     164448 kB
+Slab:             301504 kB
+SReclaimable:     164448 kB
+SUnreclaim:       137056 kB
+KernelStack:       19456 kB
+PageTables:        88456 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:17+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        29Gi       257Mi        18Mi       1.9Gi       1.7Gi
+Swap:          979Mi       8.0Mi       971Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          262828 kB
+MemAvailable:    1792272 kB
+Buffers:           88444 kB
+Cached:          1748152 kB
+SwapCached:           72 kB
+Active:          1397776 kB
+Inactive:       29314856 kB
+Active(anon):      51844 kB
+Inactive(anon): 28848392 kB
+Active(file):    1345932 kB
+Inactive(file):   466464 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         995324 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             36600 kB
+Writeback:             0 kB
+AnonPages:      28747424 kB
+Mapped:           919596 kB
+Shmem:             18568 kB
+KReclaimable:     154324 kB
+Slab:             291276 kB
+SReclaimable:     154324 kB
+SUnreclaim:       136952 kB
+KernelStack:       19360 kB
+PageTables:        90104 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:27+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        29Gi       384Mi        17Mi       1.3Gi       1.2Gi
+Swap:          979Mi       153Mi       826Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          397104 kB
+MemAvailable:    1293652 kB
+Buffers:           54672 kB
+Cached:          1161632 kB
+SwapCached:        10712 kB
+Active:          1027512 kB
+Inactive:       29570576 kB
+Active(anon):     151148 kB
+Inactive(anon): 29254748 kB
+Active(file):     876364 kB
+Inactive(file):   315828 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         844540 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              3320 kB
+Writeback:          7588 kB
+AnonPages:      29244600 kB
+Mapped:           662968 kB
+Shmem:             18300 kB
+KReclaimable:     128940 kB
+Slab:             269284 kB
+SReclaimable:     128940 kB
+SUnreclaim:       140344 kB
+KernelStack:       19536 kB
+PageTables:        91284 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:37+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        29Gi       481Mi        17Mi       1.1Gi       1.1Gi
+Swap:          979Mi       360Mi       619Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          494376 kB
+MemAvailable:    1160096 kB
+Buffers:           37688 kB
+Cached:           949736 kB
+SwapCached:        19212 kB
+Active:           767228 kB
+Inactive:       29721956 kB
+Active(anon):     240632 kB
+Inactive(anon): 29284960 kB
+Active(file):     526596 kB
+Inactive(file):   436996 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         627708 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             30624 kB
+Writeback:         19396 kB
+AnonPages:      29355808 kB
+Mapped:           458364 kB
+Shmem:             18240 kB
+KReclaimable:     124488 kB
+Slab:             264716 kB
+SReclaimable:     124488 kB
+SUnreclaim:       140228 kB
+KernelStack:       19536 kB
+PageTables:        91716 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:47+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        29Gi       511Mi        17Mi       810Mi       888Mi
+Swap:          979Mi       775Mi       204Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          524012 kB
+MemAvailable:     909240 kB
+Buffers:           22044 kB
+Cached:           686636 kB
+SwapCached:        41556 kB
+Active:          1349076 kB
+Inactive:       29111228 kB
+Active(anon):    1013244 kB
+Inactive(anon): 28762292 kB
+Active(file):     335832 kB
+Inactive(file):   348936 kB
+Unevictable:        7720 kB
+Mlocked:            7720 kB
+SwapTotal:       1003516 kB
+SwapFree:         209148 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             31528 kB
+Writeback:             0 kB
+AnonPages:      29577912 kB
+Mapped:           418880 kB
+Shmem:             18388 kB
+KReclaimable:     121152 kB
+Slab:             260784 kB
+SReclaimable:     121152 kB
+SUnreclaim:       139632 kB
+KernelStack:       20236 kB
+PageTables:        94352 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:16:57+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       502Mi        17Mi       397Mi       468Mi
+Swap:          979Mi       891Mi        88Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          509940 kB
+MemAvailable:     479264 kB
+Buffers:            1972 kB
+Cached:           299188 kB
+SwapCached:        52464 kB
+Active:          9445432 kB
+Inactive:       21056372 kB
+Active(anon):    9297456 kB
+Inactive(anon): 20927028 kB
+Active(file):     147976 kB
+Inactive(file):   129344 kB
+Unevictable:        7724 kB
+Mlocked:            7724 kB
+SwapTotal:       1003516 kB
+SwapFree:          89084 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               560 kB
+Writeback:           376 kB
+AnonPages:      30019848 kB
+Mapped:           208804 kB
+Shmem:             18096 kB
+KReclaimable:     108336 kB
+Slab:             246064 kB
+SReclaimable:     108336 kB
+SUnreclaim:       137728 kB
+KernelStack:       20432 kB
+PageTables:        95596 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:17:10+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       192Mi        14Mi       137Mi       192Mi
+Swap:          979Mi       979Mi          0B
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          231144 kB
+MemAvailable:      47840 kB
+Buffers:            2028 kB
+Cached:            88876 kB
+SwapCached:         9852 kB
+Active:         27874624 kB
+Inactive:        2922364 kB
+Active(anon):   27837568 kB
+Inactive(anon):  2890868 kB
+Active(file):      37056 kB
+Inactive(file):    31496 kB
+Unevictable:        7748 kB
+Mlocked:            7748 kB
+SwapTotal:       1003516 kB
+SwapFree:             56 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:      30706440 kB
+Mapped:            62996 kB
+Shmem:             14740 kB
+KReclaimable:      85580 kB
+Slab:             222888 kB
+SReclaimable:      85580 kB
+SUnreclaim:       137308 kB
+KernelStack:       27152 kB
+PageTables:        99676 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:21:11+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       264Mi        14Mi       215Mi       107Mi
+Swap:          979Mi       979Mi       4.0Ki
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          272600 kB
+MemAvailable:     110136 kB
+Buffers:            3004 kB
+Cached:           131072 kB
+SwapCached:        12928 kB
+Active:         27346280 kB
+Inactive:        3413604 kB
+Active(anon):   27300348 kB
+Inactive(anon):  3348580 kB
+Active(file):      45932 kB
+Inactive(file):    65024 kB
+Unevictable:        7748 kB
+Mlocked:            7748 kB
+SwapTotal:       1003516 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               132 kB
+Writeback:           300 kB
+AnonPages:      30619184 kB
+Mapped:            93952 kB
+Shmem:             17136 kB
+KReclaimable:      84856 kB
+Slab:             222220 kB
+SReclaimable:      84856 kB
+SUnreclaim:       137364 kB
+KernelStack:       26192 kB
+PageTables:        98428 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:21:21+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       342Mi        11Mi       323Mi       264Mi
+Swap:          979Mi       975Mi       4.1Mi
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          349728 kB
+MemAvailable:     270012 kB
+Buffers:            4468 kB
+Cached:           257788 kB
+SwapCached:        90004 kB
+Active:         27518252 kB
+Inactive:        3199796 kB
+Active(anon):   27392680 kB
+Inactive(anon):  3079808 kB
+Active(file):     125572 kB
+Inactive(file):   119988 kB
+Unevictable:        7752 kB
+Mlocked:            7752 kB
+SwapTotal:       1003516 kB
+SwapFree:           4216 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              1872 kB
+Writeback:           196 kB
+AnonPages:      30371840 kB
+Mapped:           197192 kB
+Shmem:             11500 kB
+KReclaimable:      69676 kB
+Slab:             201912 kB
+SReclaimable:      69676 kB
+SUnreclaim:       132236 kB
+KernelStack:       17648 kB
+PageTables:        94212 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:21:35+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       451Mi        13Mi       126Mi       251Mi
+Swap:          979Mi       979Mi          0B
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          382660 kB
+MemAvailable:     191560 kB
+Buffers:            1020 kB
+Cached:            88472 kB
+SwapCached:        52276 kB
+Active:         28172356 kB
+Inactive:        2489492 kB
+Active(anon):   28132948 kB
+Inactive(anon):  2459968 kB
+Active(file):      39408 kB
+Inactive(file):    29524 kB
+Unevictable:        7780 kB
+Mlocked:            7780 kB
+SwapTotal:       1003516 kB
+SwapFree:              8 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:            32 kB
+AnonPages:      30530624 kB
+Mapped:            55124 kB
+Shmem:             13788 kB
+KReclaimable:      69604 kB
+Slab:             207080 kB
+SReclaimable:      69604 kB
+SUnreclaim:       137476 kB
+KernelStack:       29280 kB
+PageTables:        99140 kB
+SecPageTables:         0 kB
+
+### ts=2025-12-14T19:26:38+03:00
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        30Gi       382Mi        15Mi       131Mi       183Mi
+Swap:          979Mi       979Mi          0B
+--- /proc/meminfo (head) ---
+MemTotal:       32246904 kB
+MemFree:          481984 kB
+MemAvailable:     451160 kB
+Buffers:            6476 kB
+Cached:           305740 kB
+SwapCached:        51340 kB
+Active:         28145604 kB
+Inactive:        2422808 kB
+Active(anon):   28018812 kB
+Inactive(anon):  2255044 kB
+Active(file):     126792 kB
+Inactive(file):   167764 kB
+Unevictable:        7792 kB
+Mlocked:            7792 kB
+SwapTotal:       1003516 kB
+SwapFree:          16332 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               712 kB
+Writeback:            68 kB
+AnonPages:      30215196 kB
+Mapped:           182444 kB
+Shmem:             10796 kB
+KReclaimable:      69472 kB
+Slab:             204468 kB
+SReclaimable:      69472 kB
+SUnreclaim:       134996 kB
+KernelStack:       17876 kB
+PageTables:        94920 kB
+SecPageTables:         0 kB

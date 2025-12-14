@@ -1,0 +1,9 @@
+Requests      [total, rate, throughput]  12000, 400.04, 354.82
+Duration      [total, attack, wait]      33.521365245s, 29.997086708s, 3.524278537s
+Latencies     [mean, 50, 95, 99, max]    880.407856ms, 383.419238ms, 3.973047792s, 4.960455699s, 5.003912336s
+Bytes In      [total, mean]              420171593, 35014.30
+Bytes Out     [total, mean]              202198, 16.85
+Success       [ratio]                    99.12%
+Status Codes  [code:count]               0:106  200:11894  
+Error Set:
+context deadline exceeded (Client.Timeout or context cancellation while reading body)

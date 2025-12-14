@@ -1,0 +1,957 @@
+# started_at=2025-12-14T19:04:55+03:00
+# /proc/PID/status (filtered) + smaps_rollup + pmap -x
+
+### ts=2025-12-14T19:04:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 1231320 kB
+VmRSS:	    6036 kB
+RssAnon:	    2332 kB
+RssFile:	    3704 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:                6860 kB
+Pss:                6856 kB
+Pss_Dirty:          2364 kB
+Pss_Anon:           2364 kB
+Pss_File:           4492 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4492 kB
+Private_Dirty:      2364 kB
+Referenced:         6860 kB
+Anonymous:          2364 kB
+LazyFree:              0 kB
+AnonHugePages:      2048 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2208       0 r-x-- app_linux_amd64
+0000000000673000    2676    2100       0 r---- app_linux_amd64
+0000000000910000     300     232      48 rw--- app_linux_amd64
+000000000095b000     260      84      84 rw---   [ anon ]
+000000c000000000    4096    2048    2048 rw---   [ anon ]
+000000c000400000   61440       0       0 -----   [ anon ]
+00007fa4edf6a000    2304      68      68 rw---   [ anon ]
+00007fa4ee1aa000    1024       4       4 rw---   [ anon ]
+00007fa4ee2aa000      72      12      12 rw---   [ anon ]
+00007fa4ee2bc000   32768       4       4 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       4       4       4 rw---   [ anon ]
+00007fa50043d000  524284       0       0 -----   [ anon ]
+00007fa52043c000       4       4       4 rw---   [ anon ]
+00007fa52043d000  293564       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      56      56 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         1231320    6860    2364
+
+### ts=2025-12-14T19:05:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 1231576 kB
+VmRSS:	    8084 kB
+RssAnon:	    4380 kB
+RssFile:	    3704 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:                8924 kB
+Pss:                8920 kB
+Pss_Dirty:          4428 kB
+Pss_Anon:           4428 kB
+Pss_File:           4492 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4492 kB
+Private_Dirty:      4428 kB
+Referenced:         8924 kB
+Anonymous:          4428 kB
+LazyFree:              0 kB
+AnonHugePages:      4096 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2208       0 r-x-- app_linux_amd64
+0000000000673000    2676    2100       0 r---- app_linux_amd64
+0000000000910000     300     232      48 rw--- app_linux_amd64
+000000000095b000     260      84      84 rw---   [ anon ]
+000000c000000000    4096    4096    4096 rw---   [ anon ]
+000000c000400000   61440       0       0 -----   [ anon ]
+00007fa4edf2a000    2560      84      84 rw---   [ anon ]
+00007fa4ee1aa000    1024       4       4 rw---   [ anon ]
+00007fa4ee2aa000      72      12      12 rw---   [ anon ]
+00007fa4ee2bc000   32768       4       4 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       4       4       4 rw---   [ anon ]
+00007fa50043d000  524284       0       0 -----   [ anon ]
+00007fa52043c000       4       4       4 rw---   [ anon ]
+00007fa52043d000  293564       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      56      56 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         1231576    8924    4428
+
+### ts=2025-12-14T19:06:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 1430064 kB
+VmRSS:	  250156 kB
+RssAnon:	  245332 kB
+RssFile:	    4824 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:              250688 kB
+Pss:              250684 kB
+Pss_Dirty:        245868 kB
+Pss_Anon:         245868 kB
+Pss_File:           4816 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4816 kB
+Private_Dirty:    245868 kB
+Referenced:       250688 kB
+Anonymous:        245868 kB
+LazyFree:              0 kB
+AnonHugePages:    243712 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2420       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260      96      96 rw---   [ anon ]
+000000c000000000  245760  243712  243712 rw---   [ anon ]
+000000c00f000000   16384       0       0 -----   [ anon ]
+00007fa4edd54000    4440    1824    1824 rw---   [ anon ]
+00007fa4ee1aa000    1024       8       8 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000   32768       4       4 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       4       4       4 rw---   [ anon ]
+00007fa50043d000  524284       0       0 -----   [ anon ]
+00007fa52043c000       4       4       4 rw---   [ anon ]
+00007fa52043d000  293564       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      60      60 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         1430064  250688  245868
+
+### ts=2025-12-14T19:07:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 1956016 kB
+VmRSS:	  746588 kB
+RssAnon:	  741768 kB
+RssFile:	    4820 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:              747660 kB
+Pss:              747656 kB
+Pss_Dirty:        742840 kB
+Pss_Anon:         742840 kB
+Pss_File:           4816 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4816 kB
+Private_Dirty:    742840 kB
+Referenced:       747660 kB
+Anonymous:        742840 kB
+LazyFree:              0 kB
+AnonHugePages:    739328 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2420       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260      96      96 rw---   [ anon ]
+000000c000000000  741376  739328  739328 rw---   [ anon ]
+000000c02d400000   45056       0       0 -----   [ anon ]
+00007fa4edbb4000    6104    3164    3164 rw---   [ anon ]
+00007fa4ee1aa000    1024      24      24 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000   32768       4       4 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       4       4       4 rw---   [ anon ]
+00007fa50043d000  524284       0       0 -----   [ anon ]
+00007fa52043c000       4       4       4 rw---   [ anon ]
+00007fa52043d000  293564       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      60      60 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         1956016  747660  742840
+
+### ts=2025-12-14T19:08:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 2744624 kB
+VmRSS:	 1535488 kB
+RssAnon:	 1530604 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:             1536240 kB
+Pss:             1536236 kB
+Pss_Dirty:       1531356 kB
+Pss_Anon:        1531356 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:   1531356 kB
+Referenced:      1536240 kB
+Anonymous:       1531356 kB
+LazyFree:              0 kB
+AnonHugePages:   1525760 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260      96      96 rw---   [ anon ]
+000000c000000000 1527808 1525760 1525760 rw---   [ anon ]
+000000c05d400000   45056       0       0 -----   [ anon ]
+00007fa4ed994000    8280    5224    5224 rw---   [ anon ]
+00007fa4ee1aa000    1024      48      48 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       4       4       4 rw---   [ anon ]
+00007fa50043d000  524284       0       0 -----   [ anon ]
+00007fa52043c000       4       4       4 rw---   [ anon ]
+00007fa52043d000  293564       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      60      60 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         2744624 1536240 1531356
+
+### ts=2025-12-14T19:09:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 3927928 kB
+VmRSS:	 2732508 kB
+RssAnon:	 2727624 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:             2733684 kB
+Pss:             2733680 kB
+Pss_Dirty:       2728800 kB
+Pss_Anon:        2728800 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:   2728800 kB
+Referenced:      2733684 kB
+Anonymous:       2728800 kB
+LazyFree:              0 kB
+AnonHugePages:   2719744 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260      96      96 rw---   [ anon ]
+000000c000000000 2719744 2719744 2719744 rw---   [ anon ]
+000000c0a6000000   32768       0       0 -----   [ anon ]
+00007fa4ed5fc000    5200    3584    3584 rw---   [ anon ]
+00007fa4edb16000    6736    5056    5056 rw---   [ anon ]
+00007fa4ee1aa000    1024      84      84 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000       8       8       8 rw---   [ anon ]
+00007fa50043e000  524280       0       0 -----   [ anon ]
+00007fa52043c000       8       8       8 rw---   [ anon ]
+00007fa52043e000  293560       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      60      60 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         3927928 2733684 2728800
+
+### ts=2025-12-14T19:10:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 6227388 kB
+VmRSS:	 5038688 kB
+RssAnon:	 5033804 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:             5039380 kB
+Pss:             5039376 kB
+Pss_Dirty:       5034496 kB
+Pss_Anon:        5034496 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:   5034496 kB
+Referenced:      5039380 kB
+Anonymous:       5034496 kB
+LazyFree:              0 kB
+AnonHugePages:   5019648 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260      96      96 rw---   [ anon ]
+000000c000000000 5021696 5019648 5019648 rw---   [ anon ]
+000000c132800000   24576       0       0 -----   [ anon ]
+00007fa4ed06b000   10900    9292    9292 rw---   [ anon ]
+00007fa4edb16000    6736    5056    5056 rw---   [ anon ]
+00007fa4ee1aa000    1024     156     156 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      12      12      12 rw---   [ anon ]
+00007fa50043f000  524276       0       0 -----   [ anon ]
+00007fa52043c000      12      12      12 rw---   [ anon ]
+00007fa52043f000  293556       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         6227388 5039380 5034496
+
+### ts=2025-12-14T19:11:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	 8657544 kB
+VmRSS:	 7435144 kB
+RssAnon:	 7430260 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:             7438316 kB
+Pss:             7438312 kB
+Pss_Dirty:       7433432 kB
+Pss_Anon:        7433432 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:   7433432 kB
+Referenced:      7438316 kB
+Anonymous:       7433432 kB
+LazyFree:              0 kB
+AnonHugePages:   7413760 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260     100     100 rw---   [ anon ]
+000000c000000000 7413760 7413760 7413760 rw---   [ anon ]
+000000c1c4800000   57344       0       0 -----   [ anon ]
+00007fa4ecb37000    8104    6200    6200 rw---   [ anon ]
+00007fa4ed322000    8120    7672    7672 rw---   [ anon ]
+00007fa4edb16000    6736    5220    5220 rw---   [ anon ]
+00007fa4ee1aa000    1024     228     228 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      16      16      16 rw---   [ anon ]
+00007fa500440000  524272       0       0 -----   [ anon ]
+00007fa52043c000      16      16      16 rw---   [ anon ]
+00007fa520440000  293552       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         8657544 7438320 7433436
+
+### ts=2025-12-14T19:12:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	12141476 kB
+VmRSS:	10946240 kB
+RssAnon:	10941356 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            10946928 kB
+Pss:            10946924 kB
+Pss_Dirty:      10942044 kB
+Pss_Anon:       10942044 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:  10942044 kB
+Referenced:     10946928 kB
+Anonymous:      10942044 kB
+LazyFree:              0 kB
+AnonHugePages:  10911744 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260     100     100 rw---   [ anon ]
+000000c000000000 10911744 10911744 10911744 rw---   [ anon ]
+000000c29a000000   32768       0       0 -----   [ anon ]
+00007fa4ec0ec000   11876    9932    9932 rw---   [ anon ]
+00007fa4ecc89000    6752    6392    6392 rw---   [ anon ]
+00007fa4ed322000    8120    8012    8012 rw---   [ anon ]
+00007fa4edb16000    6736    5256    5256 rw---   [ anon ]
+00007fa4ee1aa000    1024     336     336 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      24      24      24 rw---   [ anon ]
+00007fa500442000  524264       0       0 -----   [ anon ]
+00007fa52043c000      24      24      24 rw---   [ anon ]
+00007fa520442000  293544       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         12141476 10946928 10942044
+
+### ts=2025-12-14T19:13:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	16017192 kB
+VmRSS:	14824252 kB
+RssAnon:	14819368 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            14829792 kB
+Pss:            14829788 kB
+Pss_Dirty:      14824908 kB
+Pss_Anon:       14824908 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:  14824908 kB
+Referenced:     14829792 kB
+Anonymous:      14824908 kB
+LazyFree:              0 kB
+AnonHugePages:  14786560 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260     100     100 rw---   [ anon ]
+000000c000000000 14786560 14786560 14786560 rw---   [ anon ]
+000000c386800000   24576       0       0 -----   [ anon ]
+00007fa4eb80a000   15192   12304   12304 rw---   [ anon ]
+00007fa4ec6e1000    5776    5312    5312 rw---   [ anon ]
+00007fa4ecc89000    6752    6616    6616 rw---   [ anon ]
+00007fa4ed322000    8120    8020    8020 rw---   [ anon ]
+00007fa4edb16000    6736    5256    5256 rw---   [ anon ]
+00007fa4ee1aa000    1024     452     452 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      32      32      32 rw---   [ anon ]
+00007fa500444000  524256       0       0 -----   [ anon ]
+00007fa52043c000      32      32      32 rw---   [ anon ]
+00007fa520444000  293536       0       0 -----   [ anon ]
+00007fa5322ec000       4       4       4 rw---   [ anon ]
+00007fa5322ed000   36692       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         16017192 14829792 14824908
+
+### ts=2025-12-14T19:14:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	20093784 kB
+VmRSS:	18891348 kB
+RssAnon:	18886464 kB
+RssFile:	    4884 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            18892516 kB
+Pss:            18892512 kB
+Pss_Dirty:      18887632 kB
+Pss_Anon:       18887632 kB
+Pss_File:           4880 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4880 kB
+Private_Dirty:  18887632 kB
+Referenced:     18892516 kB
+Anonymous:      18887632 kB
+LazyFree:              0 kB
+AnonHugePages:  18835456 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     232      52 rw--- app_linux_amd64
+000000000095b000     260     100     100 rw---   [ anon ]
+000000c000000000 18837504 18835456 18835456 rw---   [ anon ]
+000000c47dc00000   36864       0       0 -----   [ anon ]
+00007fa4eaafe000   28552   25568   25568 rw---   [ anon ]
+00007fa4ec6e1000    5776    5688    5688 rw---   [ anon ]
+00007fa4ecc89000    6752    6628    6628 rw---   [ anon ]
+00007fa4ed322000    8120    8060    8060 rw---   [ anon ]
+00007fa4edb16000    6736    5256    5256 rw---   [ anon ]
+00007fa4ee1aa000    1024     576     576 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      36      36      36 rw---   [ anon ]
+00007fa500445000  524252       0       0 -----   [ anon ]
+00007fa52043c000      36      36      36 rw---   [ anon ]
+00007fa520445000  293532       0       0 -----   [ anon ]
+00007fa5322ec000       8       8       8 rw---   [ anon ]
+00007fa5322ee000   36688       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         20093784 18892516 18887632
+
+### ts=2025-12-14T19:15:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	25607452 kB
+VmRSS:	24389524 kB
+RssAnon:	24384680 kB
+RssFile:	    4844 kB
+RssShmem:	       0 kB
+VmSwap:	       0 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            24400072 kB
+Pss:            24400068 kB
+Pss_Dirty:      24395228 kB
+Pss_Anon:       24395228 kB
+Pss_File:           4840 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      4840 kB
+Private_Dirty:  24395228 kB
+Referenced:     24400072 kB
+Anonymous:      24395228 kB
+LazyFree:              0 kB
+AnonHugePages:  22986752 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508    2216       0 r-x-- app_linux_amd64
+0000000000673000    2676    2484       0 r---- app_linux_amd64
+0000000000910000     300     192      52 rw--- app_linux_amd64
+000000000095b000     260     100     100 rw---   [ anon ]
+000000c000000000 24346624 24337432 24337432 rw---   [ anon ]
+000000c5ce000000   32768       0       0 -----   [ anon ]
+00007fa4ea265000   23396   20388   20388 rw---   [ anon ]
+00007fa4eb966000   13800   12976   12976 rw---   [ anon ]
+00007fa4ec6e1000    5776    5688    5688 rw---   [ anon ]
+00007fa4ecc89000    6752    6628    6628 rw---   [ anon ]
+00007fa4ed322000    8120    8068    8068 rw---   [ anon ]
+00007fa4edb16000    6736    5256    5256 rw---   [ anon ]
+00007fa4ee1aa000    1024     744     744 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      48      48      48 rw---   [ anon ]
+00007fa500448000  524240       0       0 -----   [ anon ]
+00007fa52043c000      48      48      48 rw---   [ anon ]
+00007fa520448000  293520       0       0 -----   [ anon ]
+00007fa5322ec000       8       8       8 rw---   [ anon ]
+00007fa5322ee000   36688       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         25607452 24402448 24397604
+
+### ts=2025-12-14T19:16:55+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	29025084 kB
+VmRSS:	27754840 kB
+RssAnon:	27753572 kB
+RssFile:	    1268 kB
+RssShmem:	       0 kB
+VmSwap:	   44512 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            27757404 kB
+Pss:            27757400 kB
+Pss_Dirty:      27756124 kB
+Pss_Anon:       27756136 kB
+Pss_File:           1264 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:      1276 kB
+Private_Dirty:  27756124 kB
+Referenced:     27757056 kB
+Anonymous:      27756136 kB
+LazyFree:              0 kB
+AnonHugePages:  23685120 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:              43936 kB
+SwapPss:           43936 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508     728       0 r-x-- app_linux_amd64
+0000000000673000    2676     516       0 r---- app_linux_amd64
+0000000000910000     300      72      52 rw--- app_linux_amd64
+000000000095b000     260      88      88 rw---   [ anon ]
+000000c000000000 27762688 27698668 27698668 rw---   [ anon ]
+000000c69e800000   24576       0       0 -----   [ anon ]
+00007fa4e98ff000   33020   29952   29952 rw---   [ anon ]
+00007fa4eb944000   13936   13344   13344 rw---   [ anon ]
+00007fa4ec6e1000    5776    5588    5588 rw---   [ anon ]
+00007fa4ecc89000    6752    6624    6612 rw---   [ anon ]
+00007fa4ed322000    8120    7684    7684 rw---   [ anon ]
+00007fa4edb16000    6736    4988    4988 rw---   [ anon ]
+00007fa4ee1aa000    1024     664     664 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      56      52      52 rw---   [ anon ]
+00007fa50044a000  524232       0       0 -----   [ anon ]
+00007fa52043c000      56      52      52 rw---   [ anon ]
+00007fa52044a000  293512       0       0 -----   [ anon ]
+00007fa5322ec000       8       8       8 rw---   [ anon ]
+00007fa5322ee000   36688       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      20      20 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         29025084 27769200 27767920
+
+### ts=2025-12-14T19:19:09+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	29943980 kB
+VmRSS:	28634940 kB
+RssAnon:	28634940 kB
+RssFile:	       0 kB
+RssShmem:	       0 kB
+VmSwap:	   95628 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            28639512 kB
+Pss:            28639508 kB
+Pss_Dirty:      28638552 kB
+Pss_Anon:       28638552 kB
+Pss_File:            956 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:       956 kB
+Private_Dirty:  28638552 kB
+Referenced:     28587124 kB
+Anonymous:      28638552 kB
+LazyFree:              0 kB
+AnonHugePages:  23732224 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:              95616 kB
+SwapPss:           95616 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   ./app_linux_amd64
+Address           Kbytes     RSS   Dirty Mode  Mapping
+0000000000400000    2508     680       0 r-x-- app_linux_amd64
+0000000000673000    2676     128       0 r---- app_linux_amd64
+0000000000910000     300      64      52 rw--- app_linux_amd64
+000000000095b000     260      92      92 rw---   [ anon ]
+000000c000000000 28688384 28568808 28568808 rw---   [ anon ]
+000000c6d7000000   16384       0       0 -----   [ anon ]
+00007fa4e97a3000   34412   30196   30196 rw---   [ anon ]
+00007fa4eb944000   13936   13424   13424 rw---   [ anon ]
+00007fa4ec6e1000    5776    5680    5680 rw---   [ anon ]
+00007fa4ecc89000    6752    6624    6624 rw---   [ anon ]
+00007fa4ed322000    8120    7692    7692 rw---   [ anon ]
+00007fa4edb16000    6736    5072    5072 rw---   [ anon ]
+00007fa4ee1aa000    1024     636     636 rw---   [ anon ]
+00007fa4ee2aa000      72      72      72 rw---   [ anon ]
+00007fa4ee2bc000    1296       0       0 rw---   [ anon ]
+00007fa4ee400000   30720       4       4 rw---   [ anon ]
+00007fa4f0200000     752       0       0 rw---   [ anon ]
+00007fa4f02bc000  263680       0       0 -----   [ anon ]
+00007fa50043c000      56      52      52 rw---   [ anon ]
+00007fa50044a000  524232       0       0 -----   [ anon ]
+00007fa52043c000      56      52      52 rw---   [ anon ]
+00007fa52044a000  293512       0       0 -----   [ anon ]
+00007fa5322ec000       8       8       8 rw---   [ anon ]
+00007fa5322ee000   36688       0       0 -----   [ anon ]
+00007fa5346c2000       4       4       4 rw---   [ anon ]
+00007fa5346c3000    4580       0       0 -----   [ anon ]
+00007fa534b3c000       4       4       4 rw---   [ anon ]
+00007fa534b3d000     508       0       0 -----   [ anon ]
+00007fa534bbc000     384      64      64 rw---   [ anon ]
+00007ffc30145000     136      16      16 rw---   [ stack ]
+00007ffc30195000      16       0       0 r----   [ anon ]
+00007ffc30199000       8       4       0 r-x--   [ anon ]
+---------------- ------- ------- ------- 
+total kB         29943980 28639376 28638552
+
+### ts=2025-12-14T19:22:06+03:00
+--- /proc/7559/status (filtered) ---
+VmSize:	29943980 kB
+VmRSS:	28631616 kB
+RssAnon:	28631616 kB
+RssFile:	       0 kB
+RssShmem:	       0 kB
+VmSwap:	   99000 kB
+--- /proc/7559/smaps_rollup ---
+00400000-7ffc3019b000 ---p 00000000 00:00 0                              [rollup]
+Rss:            28636212 kB
+Pss:            28636208 kB
+Pss_Dirty:      28635220 kB
+Pss_Anon:       28635220 kB
+Pss_File:            988 kB
+Pss_Shmem:             0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:       988 kB
+Private_Dirty:  28635220 kB
+Referenced:     28580940 kB
+Anonymous:      28635220 kB
+LazyFree:              0 kB
+AnonHugePages:  23732224 kB
+ShmemPmdMapped:        0 kB
+FilePmdMapped:         0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:              98992 kB
+SwapPss:           98992 kB
+Locked:                0 kB
+--- pmap -x ---
+7559:   [app_linux_amd64] <defunct>
+Address           Kbytes     RSS   Dirty Mode  Mapping
+---------------- ------- ------- ------- 
+total kB               0       0       0

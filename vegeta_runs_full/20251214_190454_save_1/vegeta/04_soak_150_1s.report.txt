@@ -1,0 +1,13 @@
+Requests      [total, rate, throughput]  12978, 72.06, 66.50
+Duration      [total, attack, wait]      3m10.503495757s, 3m0.111034524s, 10.392461233s
+Latencies     [mean, 50, 95, 99, max]    2.851806925s, 395.477427ms, 3.173476347s, 1m34.862325398s, 1m40.813184545s
+Bytes In      [total, mean]              449422672, 34629.58
+Bytes Out     [total, mean]              215356, 16.59
+Success       [ratio]                    97.61%
+Status Codes  [code:count]               0:310  200:12668  
+Error Set:
+Post "http://localhost:8080/": http: server closed idle connection
+context deadline exceeded (Client.Timeout or context cancellation while reading body)
+Post "http://localhost:8080/": EOF
+Get "http://localhost:8080/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+Post "http://localhost:8080/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

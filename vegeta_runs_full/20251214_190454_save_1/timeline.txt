@@ -1,0 +1,25 @@
+timestamp=2025-12-14T19:04:54+03:00 start app
+timestamp=2025-12-14T19:04:54+03:00 app pid=7559
+timestamp=2025-12-14T19:04:55+03:00 monitors started
+timestamp=2025-12-14T19:04:55+03:00 snapshot loops started
+timestamp=2025-12-14T19:04:55+03:00 load scenario pid=7629
+timestamp=2025-12-14T19:04:55+03:00 cold idle start duration=90s
+timestamp=2025-12-14T19:06:25+03:00 cold idle end
+timestamp=2025-12-14T19:06:25+03:00 load phase start name=01_warmup rate=20/1s duration=120s
+timestamp=2025-12-14T19:08:27+03:00 load phase end name=01_warmup
+timestamp=2025-12-14T19:08:27+03:00 load phase start name=02_step_01_50_1s rate=50/1s duration=90s
+timestamp=2025-12-14T19:10:01+03:00 load phase end name=02_step_01_50_1s
+timestamp=2025-12-14T19:10:01+03:00 load phase start name=02_step_02_100_1s rate=100/1s duration=90s
+timestamp=2025-12-14T19:11:38+03:00 load phase end name=02_step_02_100_1s
+timestamp=2025-12-14T19:11:38+03:00 load phase start name=02_step_03_150_1s rate=150/1s duration=90s
+timestamp=2025-12-14T19:13:18+03:00 load phase end name=02_step_03_150_1s
+timestamp=2025-12-14T19:13:18+03:00 load phase start name=02_step_04_200_1s rate=200/1s duration=90s
+timestamp=2025-12-14T19:15:02+03:00 load phase end name=02_step_04_200_1s
+timestamp=2025-12-14T19:15:02+03:00 load phase start name=03_stress_01_400_1s rate=400/1s duration=30s
+timestamp=2025-12-14T19:15:45+03:00 load phase end name=03_stress_01_400_1s
+timestamp=2025-12-14T19:15:45+03:00 load phase start name=04_soak_150_1s rate=150/1s duration=3m
+timestamp=2025-12-14T19:21:19+03:00 load phase end name=04_soak_150_1s
+timestamp=2025-12-14T19:21:19+03:00 cooldown idle start duration=180s
+timestamp=2025-12-14T19:25:13+03:00 cooldown idle end
+timestamp=2025-12-14T19:26:35+03:00 done
+timestamp=2025-12-14T19:26:40+03:00 cleanup: stopping load/monitors/app

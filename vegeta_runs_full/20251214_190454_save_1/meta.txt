@@ -1,0 +1,25 @@
+date=2025-12-14T19:04:54+03:00
+outdir=./vegeta_runs_full/20251214_190454
+app=./app_linux_amd64
+targets=targets.txt
+
+interval_sec=1
+net_snapshot_interval_sec=5
+softirq_snapshot_interval_sec=5
+snapshot_interval_sec=10
+heavy_snapshot_interval_sec=60
+
+timeout=5s
+hist=hist[0ms,1ms,2ms,5ms,10ms,20ms,50ms,100ms,200ms,500ms,1s,2s,5s]
+COLD_IDLE=90s COOLDOWN_IDLE=180s
+WARMUP_RATE=20/1s WARMUP_DURATION=120s
+STEP_DURATION=90s STEP_RATES=50/1s 100/1s 150/1s 200/1s
+STRESS_DURATION=30s STRESS_RATES=400/1s
+SOAK_RATE=150/1s SOAK_DURATION=3m
+
+uname=Linux WL-c5bd0aca 6.1.0-35-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.137-1 (2025-05-07) x86_64 GNU/Linux
+nproc=12
+vegeta_version=Version: 
+Commit: 
+Runtime: go1.24.7 linux/amd64
+Date: 
