@@ -17,13 +17,10 @@ mkdir -p "$DIR_APP" "$DIR_MON" "$DIR_LOAD"
 # Sampling / intervals
 # =========================
 INTERVAL_SEC="${INTERVAL_SEC:-1}"
-
 NET_SNAPSHOT_INTERVAL_SEC="${NET_SNAPSHOT_INTERVAL_SEC:-5}"
 SOFTIRQ_SNAPSHOT_INTERVAL_SEC="${SOFTIRQ_SNAPSHOT_INTERVAL_SEC:-5}"
-
-SNAPSHOT_INTERVAL_SEC="${SNAPSHOT_INTERVAL_SEC:-10}"                  # free/meminfo
-HEAVY_SNAPSHOT_INTERVAL_SEC="${HEAVY_SNAPSHOT_INTERVAL_SEC:-60}"      # status/smaps_rollup/pmap
-
+SNAPSHOT_INTERVAL_SEC="${SNAPSHOT_INTERVAL_SEC:-10}"          # free/meminfo
+HEAVY_SNAPSHOT_INTERVAL_SEC="${HEAVY_SNAPSHOT_INTERVAL_SEC:-60}" # status/smaps_rollup/pmap
 THREAD_SUMMARY_INTERVAL_SEC="${THREAD_SUMMARY_INTERVAL_SEC:-1}"
 THREAD_DUMP_INTERVAL_SEC="${THREAD_DUMP_INTERVAL_SEC:-1}"
 
@@ -46,12 +43,12 @@ SOAK_DURATION="${SOAK_DURATION:-5m}"
 
 HIST_BUCKETS="${HIST_BUCKETS:-hist[0ms,1ms,2ms,5ms,10ms,20ms,50ms,100ms,200ms,500ms,1s,2s,5s]}"
 
-# Rates: fixed arrays by default (to avoid "rate=50/1s 100/1s ..." bug)
+# Rates: fixed arrays by default
 STEP_RATES_DEFAULT=("50/1s" "100/1s" "150/1s" "200/1s" "250/1s")
 STRESS_RATES_DEFAULT=("350/1s")
 
 # Optional override (comma-separated, no spaces):
-#   STEP_RATES_STR="50/1s,100/1s" STRESS_RATES_STR="1200/1s,1600/1s" ./vegeta_full.sh ...
+# STEP_RATES_STR="50/1s,100/1s" STRESS_RATES_STR="1200/1s,1600/1s" ./vegeta_full.sh ...
 STEP_RATES_STR="${STEP_RATES_STR:-}"
 STRESS_RATES_STR="${STRESS_RATES_STR:-}"
 
@@ -78,25 +75,21 @@ command -v vegeta >/dev/null 2>&1 || { echo "ERROR: vegeta not found in PATH" >&
 [[ -x "$APP" ]] || { echo "ERROR: $APP not found or not executable" >&2; exit 1; }
 
 # =========================
-# 2) Cleanup / trap (алгоритм тот же: load -> jobs -> app -> wait)
+# 2) Cleanup / trap
 # =========================
 cleanup() {
   log_meta "cleanup: stopping load/monitors/app"
 
-  # 1) stop load scenario (best-effort)
   if [[ -n "${LOAD_PID:-}" ]] && kill -0 "$LOAD_PID" 2>/dev/null; then
     kill "$LOAD_PID" 2>/dev/null || true
   fi
 
-  # 2) stop background jobs started by this script (monitors, snapshots)
   jobs -p | xargs -r kill 2>/dev/null || true
 
-  # 3) stop app
   if [[ -n "${APP_PID:-}" ]] && kill -0 "$APP_PID" 2>/dev/null; then
     kill "$APP_PID" 2>/dev/null || true
   fi
 
-  # 4) wait
   wait 2>/dev/null || true
 }
 trap cleanup INT TERM EXIT
@@ -139,13 +132,12 @@ echo "$APP_PID" > "$DIR_APP/app.pid"
 log_meta "app pid=$APP_PID"
 
 # =========================
-# 5) Monitors (Level 1 + Level 2/3)
+# 5) Monitors
 # =========================
 start_monitor() {
   local name="$1"; shift
   local outfile="$DIR_MON/${name}.log"
 
-  # command exists?
   if ! command -v "$1" >/dev/null 2>&1; then
     echo "SKIP: $1 not installed" | tee -a "$OUTDIR/monitors_skipped.txt" >/dev/null
     return 0
@@ -158,40 +150,30 @@ start_monitor() {
     echo
   } > "$outfile"
 
-  # IMPORTANT: exec replaces subshell with the tool => jobs -p kill stops the real tool.
   ( exec "$@" >> "$outfile" 2>&1 ) &
 }
 
-# ---- CPU / scheduler baseline (L1) ----
+# L1
 start_monitor "mpstat" mpstat -P ALL "$INTERVAL_SEC"
 start_monitor "vmstat" vmstat "$INTERVAL_SEC"
-start_monitor "sar_q"  sar -q "$INTERVAL_SEC"
-
-# Per-thread CPU + ctx switches (L1)
+start_monitor "sar_q" sar -q "$INTERVAL_SEC"
 start_monitor "pidstat_cpu_threads" pidstat -u -t -p "$APP_PID" "$INTERVAL_SEC"
 start_monitor "pidstat_ctx_threads" pidstat -w -t -p "$APP_PID" "$INTERVAL_SEC"
 
-# ---- Memory (L2) ----
-start_monitor "sar_mem"     sar -r "$INTERVAL_SEC"
-start_monitor "sar_paging"  sar -B "$INTERVAL_SEC"
+# L2
+start_monitor "sar_mem" sar -r "$INTERVAL_SEC"
+start_monitor "sar_paging" sar -B "$INTERVAL_SEC"
 start_monitor "pidstat_mem_proc" pidstat -r -p "$APP_PID" "$INTERVAL_SEC"
-
-# ---- Disk / IO (L2) ----
-start_monitor "iostat_xz"   iostat -xz "$INTERVAL_SEC"
+start_monitor "iostat_xz" iostat -xz "$INTERVAL_SEC"
 start_monitor "sar_blockio" sar -b "$INTERVAL_SEC"
 start_monitor "pidstat_io_proc" pidstat -d -p "$APP_PID" "$INTERVAL_SEC"
 
-# ---- Network (L3) ----
-# DEV/EDEV: per-interface traffic + errors/drops.
-start_monitor "sar_net_dev"  sar -n DEV "$INTERVAL_SEC"
+# L3
+start_monitor "sar_net_dev"  sar -n DEV  "$INTERVAL_SEC"
 start_monitor "sar_net_edev" sar -n EDEV "$INTERVAL_SEC"
-# TCP/ETCP: aggregated TCP + extended TCP stats (retransmits etc. if available).
 start_monitor "sar_net_tcp"  sar -n TCP,ETCP "$INTERVAL_SEC"
+start_monitor "sar_irq_all"  sar -I ALL "$INTERVAL_SEC"
 
-# ---- IRQ (L3) ----
-start_monitor "sar_irq_all" sar -I ALL "$INTERVAL_SEC"
-
-# Optional: global netstat counters (if iproute2 nstat exists)
 if command -v nstat >/dev/null 2>&1; then
   start_monitor "nstat" nstat -az "$NET_SNAPSHOT_INTERVAL_SEC"
 else
@@ -201,7 +183,7 @@ fi
 log_meta "monitors started"
 
 # =========================
-# 5b) Snapshot loops (L2/L3)
+# 5b) Snapshot loops
 # =========================
 thread_summary_monitor() {
   local out="$DIR_MON/threads_summary.log"
@@ -210,7 +192,6 @@ thread_summary_monitor() {
     echo "# columns: ts total_threads R runnable S sleeping D uninterruptible other"
     echo
   } > "$out"
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     local total r s d other
     total=$(ls "/proc/$APP_PID/task" 2>/dev/null | wc -l | tr -d ' ')
@@ -230,7 +211,6 @@ thread_dump_monitor() {
     echo "# columns: ts SPID PSR STAT %CPU COMMAND"
     echo
   } > "$out"
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     echo "### ts=$(date -Is)" >> "$out"
     ps -T -p "$APP_PID" -o spid=,psr=,stat=,pcpu=,comm= >> "$out" 2>/dev/null || true
@@ -246,7 +226,6 @@ snapshots_monitor() {
     echo "# periodic snapshots: free -h and /proc/meminfo (head)"
     echo
   } > "$out"
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     echo "### ts=$(date -Is)" >> "$out"
     free -h >> "$out" 2>&1 || true
@@ -257,7 +236,6 @@ snapshots_monitor() {
   done
 }
 
-# L2: memory layout / leak hints
 mem_layout_monitor() {
   local out="$DIR_MON/mem_layout.log"
   {
@@ -265,15 +243,12 @@ mem_layout_monitor() {
     echo "# /proc/PID/status (filtered) + smaps_rollup + pmap -x"
     echo
   } > "$out"
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     echo "### ts=$(date -Is)" >> "$out"
     echo "--- /proc/$APP_PID/status (filtered) ---" >> "$out"
     egrep '^(VmRSS|VmSize|RssAnon|RssFile|RssShmem|VmSwap):' "/proc/$APP_PID/status" >> "$out" 2>&1 || true
-
     echo "--- /proc/$APP_PID/smaps_rollup ---" >> "$out"
     cat "/proc/$APP_PID/smaps_rollup" >> "$out" 2>&1 || true
-
     if command -v pmap >/dev/null 2>&1; then
       echo "--- pmap -x ---" >> "$out"
       pmap -x "$APP_PID" >> "$out" 2>&1 || true
@@ -281,13 +256,11 @@ mem_layout_monitor() {
       echo "--- pmap -x ---" >> "$out"
       echo "SKIP: pmap not installed" >> "$out"
     fi
-
     echo >> "$out"
     sleep "$HEAVY_SNAPSHOT_INTERVAL_SEC"
   done
 }
 
-# L3: socket queues/backlog symptoms
 ss_snapshot_monitor() {
   local out="$DIR_MON/ss_sockets.log"
   {
@@ -295,12 +268,10 @@ ss_snapshot_monitor() {
     echo "# ss -ntpi (established) and ss -lntpi (listening) snapshots"
     echo
   } > "$out"
-
   if ! command -v ss >/dev/null 2>&1; then
     echo "SKIP: ss not installed" | tee -a "$OUTDIR/monitors_skipped.txt" >/dev/null
     return 0
   fi
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     echo "### ts=$(date -Is)" >> "$out"
     ss -ntpi >> "$out" 2>&1 || true
@@ -311,7 +282,6 @@ ss_snapshot_monitor() {
   done
 }
 
-# L3: softirq distribution (NET_RX/NET_TX)
 softirqs_snapshot_monitor() {
   local out="$DIR_MON/softirqs.log"
   {
@@ -319,7 +289,6 @@ softirqs_snapshot_monitor() {
     echo "# /proc/softirqs snapshots"
     echo
   } > "$out"
-
   while kill -0 "$APP_PID" 2>/dev/null; do
     echo "### ts=$(date -Is)" >> "$out"
     cat /proc/softirqs >> "$out" 2>&1 || true
@@ -344,7 +313,7 @@ run_phase() {
   local rate="$2"
   local duration="$3"
 
-  local bin="${DIR_LOAD}/${name}.bin"
+  local bin_gz="${DIR_LOAD}/${name}.bin.gz"
   local rpt_txt="${DIR_LOAD}/${name}.report.txt"
   local rpt_json="${DIR_LOAD}/${name}.report.json"
   local rpt_hist="${DIR_LOAD}/${name}.hist.txt"
@@ -358,13 +327,13 @@ run_phase() {
     -rate="$rate" \
     -duration="$duration" \
     -timeout="$TIMEOUT" \
-  | tee "$bin" \
+  | tee >(gzip -c > "$bin_gz") \
   | vegeta report \
   | tee "$rpt_txt" >/dev/null
 
-  vegeta report -type=json "$bin" > "$rpt_json"
-  vegeta report -type="$HIST_BUCKETS" "$bin" > "$rpt_hist"
-  vegeta plot -title "$name" "$bin" > "$plot_html"
+  gzip -dc "$bin_gz" | vegeta report -type=json > "$rpt_json"
+  gzip -dc "$bin_gz" | vegeta report -type="$HIST_BUCKETS" > "$rpt_hist"
+  gzip -dc "$bin_gz" | vegeta plot -title "$name" > "$plot_html"
 
   log_meta "load phase end name=${name}"
 }
@@ -378,8 +347,7 @@ load_scenario() {
 
   run_phase "01_warmup" "$WARMUP_RATE" "$WARMUP_DURATION"
 
-  local i=0
-  local r
+  local i=0 r
   for r in "${STEP_RATES[@]}"; do
     i=$((i+1))
     run_phase "$(printf '02_step_%02d_%s' "$i" "${r//\//_}")" "$r" "$STEP_DURATION"
