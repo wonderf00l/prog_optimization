@@ -6,51 +6,32 @@ set -euo pipefail
 # =========================
 APP="${APP:-./app_linux_amd64}"
 TARGETS_FILE="${1:-targets.txt}"
-OUTDIR="${2:-./vegeta_runs_full/$(date +%Y%m%d_%H%M%S)}"
+OUTDIR="${2:-./vegeta_runs/$(date +%Y%m%d_%H%M%S)}"
 
-DIR_APP="$OUTDIR/app"
-DIR_MON="$OUTDIR/mon"
-DIR_LOAD="$OUTDIR/vegeta"
-mkdir -p "$DIR_APP" "$DIR_MON" "$DIR_LOAD"
-
-# =========================
-# Sampling / intervals
-# =========================
+# Sysstat / sampling
 INTERVAL_SEC="${INTERVAL_SEC:-1}"
-
-NET_SNAPSHOT_INTERVAL_SEC="${NET_SNAPSHOT_INTERVAL_SEC:-5}"
-SOFTIRQ_SNAPSHOT_INTERVAL_SEC="${SOFTIRQ_SNAPSHOT_INTERVAL_SEC:-5}"
-
-SNAPSHOT_INTERVAL_SEC="${SNAPSHOT_INTERVAL_SEC:-10}"                  # free/meminfo
-HEAVY_SNAPSHOT_INTERVAL_SEC="${HEAVY_SNAPSHOT_INTERVAL_SEC:-60}"      # status/smaps_rollup/pmap
-
 THREAD_SUMMARY_INTERVAL_SEC="${THREAD_SUMMARY_INTERVAL_SEC:-1}"
 THREAD_DUMP_INTERVAL_SEC="${THREAD_DUMP_INTERVAL_SEC:-1}"
+SNAPSHOT_INTERVAL_SEC="${SNAPSHOT_INTERVAL_SEC:-10}"
 
-# =========================
-# Vegeta scenario
-# =========================
+# Vegeta core
 TIMEOUT="${TIMEOUT:-5s}"
 
-COLD_IDLE="${COLD_IDLE:-120s}"
-COOLDOWN_IDLE="${COOLDOWN_IDLE:-120s}"
+# Phases
+COLD_IDLE="${COLD_IDLE:-5s}"         # idle до warmup
+COOLDOWN_IDLE="${COOLDOWN_IDLE:-120s}" # idle после soak
 
 WARMUP_RATE="${WARMUP_RATE:-20/1s}"
-WARMUP_DURATION="${WARMUP_DURATION:-120s}"
+WARMUP_DURATION="${WARMUP_DURATION:-5s}"
 
-STEP_DURATION="${STEP_DURATION:-120s}"
-STRESS_DURATION="${STRESS_DURATION:-30s}"
+STEP_DURATION="${STEP_DURATION:-5s}"
 
-SOAK_RATE="${SOAK_RATE:-600/1s}"
-SOAK_DURATION="${SOAK_DURATION:-5m}"
+# FIX: нормальные массивы по умолчанию (не строка!)
+STEP_RATES_DEFAULT=("50/1s" "100/1s" "200/1s" "300/1s" "500/1s")
+STRESS_DURATION="${STRESS_DURATION:-5s}"
+STRESS_RATES_DEFAULT=("700/1s" "900/1s" "1200/1s")
 
-HIST_BUCKETS="${HIST_BUCKETS:-hist[0ms,1ms,2ms,5ms,10ms,20ms,50ms,100ms,200ms,500ms,1s,2s,5s]}"
-
-# Rates: fixed arrays by default (to avoid "rate=50/1s 100/1s ..." bug)
-STEP_RATES_DEFAULT=("50/1s" "100/1s" "200/1s" "400/1s" "600/1s")
-STRESS_RATES_DEFAULT=("800/1s" "1000/1s" "1200/1s")
-
-# Optional override (comma-separated, no spaces):
+# Возможность переопределения через env с запятыми (без пробелов):
 #   STEP_RATES_STR="50/1s,100/1s" STRESS_RATES_STR="1200/1s,1600/1s" ./vegeta_full.sh ...
 STEP_RATES_STR="${STEP_RATES_STR:-}"
 STRESS_RATES_STR="${STRESS_RATES_STR:-}"
@@ -67,7 +48,15 @@ else
   STRESS_RATES=("${STRESS_RATES_DEFAULT[@]}")
 fi
 
-log()      { printf '[%s] %s\n' "$(date '+%F %T')" "$*"; }
+SOAK_RATE="${SOAK_RATE:-400/1s}"
+SOAK_DURATION="${SOAK_DURATION:-5s}"
+
+# Histogram buckets
+HIST_BUCKETS="${HIST_BUCKETS:-hist[0ms,1ms,2ms,5ms,10ms,20ms,50ms,100ms,200ms,500ms,1s,2s,5s]}"
+
+mkdir -p "$OUTDIR"
+
+log() { printf '[%s] %s\n' "$(date '+%F %T')" "$*"; }
 log_meta() { echo "timestamp=$(date -Is) $*" >> "$OUTDIR/timeline.txt"; }
 
 # =========================
@@ -75,46 +64,51 @@ log_meta() { echo "timestamp=$(date -Is) $*" >> "$OUTDIR/timeline.txt"; }
 # =========================
 command -v vegeta >/dev/null 2>&1 || { echo "ERROR: vegeta not found in PATH" >&2; exit 1; }
 [[ -f "$TARGETS_FILE" ]] || { echo "ERROR: targets file not found: $TARGETS_FILE" >&2; exit 1; }
-[[ -x "$APP" ]] || { echo "ERROR: $APP not found or not executable" >&2; exit 1; }
+if [[ ! -x "$APP" ]]; then
+  echo "ERROR: $APP not found or not executable" >&2
+  exit 1
+fi
 
 # =========================
-# 2) Cleanup / trap (алгоритм тот же: load -> jobs -> app -> wait)
+# 2) Cleanup / trap (оставляем алгоритм как был)
 # =========================
 cleanup() {
   log_meta "cleanup: stopping load/monitors/app"
 
-  # 1) stop load scenario (best-effort)
+  # stop load scenario if any (best-effort)
   if [[ -n "${LOAD_PID:-}" ]] && kill -0 "$LOAD_PID" 2>/dev/null; then
     kill "$LOAD_PID" 2>/dev/null || true
   fi
 
-  # 2) stop background jobs started by this script (monitors, snapshots)
+  # stop all background monitors started by this script
   jobs -p | xargs -r kill 2>/dev/null || true
 
-  # 3) stop app
+  # stop app
   if [[ -n "${APP_PID:-}" ]] && kill -0 "$APP_PID" 2>/dev/null; then
     kill "$APP_PID" 2>/dev/null || true
   fi
 
-  # 4) wait
   wait 2>/dev/null || true
 }
 trap cleanup INT TERM EXIT
 
 # =========================
-# 3) Meta
+# 3) Meta / env info
 # =========================
 {
   echo "date=$(date -Is)"
-  echo "outdir=$OUTDIR"
+  uname -a
+  command -v lscpu >/dev/null 2>&1 && lscpu || true
+  echo "nproc=$(nproc)"
+  echo
   echo "app=$APP"
   echo "targets=$TARGETS_FILE"
+  echo "outdir=$OUTDIR"
   echo
   echo "interval_sec=$INTERVAL_SEC"
-  echo "net_snapshot_interval_sec=$NET_SNAPSHOT_INTERVAL_SEC"
-  echo "softirq_snapshot_interval_sec=$SOFTIRQ_SNAPSHOT_INTERVAL_SEC"
+  echo "thread_summary_interval_sec=$THREAD_SUMMARY_INTERVAL_SEC"
+  echo "thread_dump_interval_sec=$THREAD_DUMP_INTERVAL_SEC"
   echo "snapshot_interval_sec=$SNAPSHOT_INTERVAL_SEC"
-  echo "heavy_snapshot_interval_sec=$HEAVY_SNAPSHOT_INTERVAL_SEC"
   echo
   echo "timeout=$TIMEOUT"
   echo "hist=$HIST_BUCKETS"
@@ -124,8 +118,6 @@ trap cleanup INT TERM EXIT
   echo "STRESS_DURATION=$STRESS_DURATION STRESS_RATES=${STRESS_RATES[*]}"
   echo "SOAK_RATE=$SOAK_RATE SOAK_DURATION=$SOAK_DURATION"
   echo
-  echo "uname=$(uname -a)"
-  echo "nproc=$(nproc)"
   echo "vegeta_version=$(vegeta -version 2>/dev/null || true)"
 } > "$OUTDIR/meta.txt"
 
@@ -133,19 +125,18 @@ trap cleanup INT TERM EXIT
 # 4) Start app
 # =========================
 log_meta "start app"
-"$APP" > "$DIR_APP/app_stdout.log" 2> "$DIR_APP/app_stderr.log" &
+"$APP" > "$OUTDIR/app_stdout.log" 2> "$OUTDIR/app_stderr.log" &
 APP_PID=$!
-echo "$APP_PID" > "$DIR_APP/app.pid"
+echo "$APP_PID" > "$OUTDIR/app.pid"
 log_meta "app pid=$APP_PID"
 
 # =========================
-# 5) Monitors (Level 1 + Level 2/3)
+# 5) Diagnostics: monitors (Level 1)
 # =========================
 start_monitor() {
   local name="$1"; shift
-  local outfile="$DIR_MON/${name}.log"
+  local outfile="$OUTDIR/${name}.log"
 
-  # command exists?
   if ! command -v "$1" >/dev/null 2>&1; then
     echo "SKIP: $1 not installed" | tee -a "$OUTDIR/monitors_skipped.txt" >/dev/null
     return 0
@@ -158,53 +149,25 @@ start_monitor() {
     echo
   } > "$outfile"
 
-  # IMPORTANT: exec replaces subshell with the tool => jobs -p kill stops the real tool.
-  ( exec "$@" >> "$outfile" 2>&1 ) &
+  bash -c "exec $* >> '$outfile' 2>&1" &
 }
 
-# ---- CPU / scheduler baseline (L1) ----
 start_monitor "mpstat" mpstat -P ALL "$INTERVAL_SEC"
 start_monitor "vmstat" vmstat "$INTERVAL_SEC"
-start_monitor "sar_q"  sar -q "$INTERVAL_SEC"
+start_monitor "sar_q" sar -q "$INTERVAL_SEC"
 
-# Per-thread CPU + ctx switches (L1)
 start_monitor "pidstat_cpu_threads" pidstat -u -t -p "$APP_PID" "$INTERVAL_SEC"
 start_monitor "pidstat_ctx_threads" pidstat -w -t -p "$APP_PID" "$INTERVAL_SEC"
 
-# ---- Memory (L2) ----
-start_monitor "sar_mem"     sar -r "$INTERVAL_SEC"
-start_monitor "sar_paging"  sar -B "$INTERVAL_SEC"
-start_monitor "pidstat_mem_proc" pidstat -r -p "$APP_PID" "$INTERVAL_SEC"
-
-# ---- Disk / IO (L2) ----
-start_monitor "iostat_xz"   iostat -xz "$INTERVAL_SEC"
+start_monitor "sar_mem" sar -r "$INTERVAL_SEC"
+start_monitor "sar_paging" sar -B "$INTERVAL_SEC"
+start_monitor "iostat_xz" iostat -xz "$INTERVAL_SEC"
 start_monitor "sar_blockio" sar -b "$INTERVAL_SEC"
-start_monitor "pidstat_io_proc" pidstat -d -p "$APP_PID" "$INTERVAL_SEC"
 
-# ---- Network (L3) ----
-# DEV/EDEV: per-interface traffic + errors/drops.
-start_monitor "sar_net_dev"  sar -n DEV "$INTERVAL_SEC"
-start_monitor "sar_net_edev" sar -n EDEV "$INTERVAL_SEC"
-# TCP/ETCP: aggregated TCP + extended TCP stats (retransmits etc. if available).
-start_monitor "sar_net_tcp"  sar -n TCP,ETCP "$INTERVAL_SEC"
+log_meta "sysstat monitors started"
 
-# ---- IRQ (L3) ----
-start_monitor "sar_irq_all" sar -I ALL "$INTERVAL_SEC"
-
-# Optional: global netstat counters (if iproute2 nstat exists)
-if command -v nstat >/dev/null 2>&1; then
-  start_monitor "nstat" nstat -az "$NET_SNAPSHOT_INTERVAL_SEC"
-else
-  echo "SKIP: nstat not installed" | tee -a "$OUTDIR/monitors_skipped.txt" >/dev/null
-fi
-
-log_meta "monitors started"
-
-# =========================
-# 5b) Snapshot loops (L2/L3)
-# =========================
 thread_summary_monitor() {
-  local out="$DIR_MON/threads_summary.log"
+  local out="$OUTDIR/threads_summary.log"
   {
     echo "# started_at=$(date -Is)"
     echo "# columns: ts total_threads R runnable S sleeping D uninterruptible other"
@@ -224,7 +187,7 @@ thread_summary_monitor() {
 }
 
 thread_dump_monitor() {
-  local out="$DIR_MON/threads_dump.log"
+  local out="$OUTDIR/threads_dump.log"
   {
     echo "# started_at=$(date -Is)"
     echo "# columns: ts SPID PSR STAT %CPU COMMAND"
@@ -240,7 +203,7 @@ thread_dump_monitor() {
 }
 
 snapshots_monitor() {
-  local out="$DIR_MON/snapshots_mem.log"
+  local out="$OUTDIR/snapshots_mem.log"
   {
     echo "# started_at=$(date -Is)"
     echo "# periodic snapshots: free -h and /proc/meminfo (head)"
@@ -251,90 +214,16 @@ snapshots_monitor() {
     echo "### ts=$(date -Is)" >> "$out"
     free -h >> "$out" 2>&1 || true
     echo "--- /proc/meminfo (head) ---" >> "$out"
-    head -n 30 /proc/meminfo >> "$out" 2>&1 || true
+    head -n 20 /proc/meminfo >> "$out" 2>&1 || true
     echo >> "$out"
     sleep "$SNAPSHOT_INTERVAL_SEC"
-  done
-}
-
-# L2: memory layout / leak hints
-mem_layout_monitor() {
-  local out="$DIR_MON/mem_layout.log"
-  {
-    echo "# started_at=$(date -Is)"
-    echo "# /proc/PID/status (filtered) + smaps_rollup + pmap -x"
-    echo
-  } > "$out"
-
-  while kill -0 "$APP_PID" 2>/dev/null; do
-    echo "### ts=$(date -Is)" >> "$out"
-    echo "--- /proc/$APP_PID/status (filtered) ---" >> "$out"
-    egrep '^(VmRSS|VmSize|RssAnon|RssFile|RssShmem|VmSwap):' "/proc/$APP_PID/status" >> "$out" 2>&1 || true
-
-    echo "--- /proc/$APP_PID/smaps_rollup ---" >> "$out"
-    cat "/proc/$APP_PID/smaps_rollup" >> "$out" 2>&1 || true
-
-    if command -v pmap >/dev/null 2>&1; then
-      echo "--- pmap -x ---" >> "$out"
-      pmap -x "$APP_PID" >> "$out" 2>&1 || true
-    else
-      echo "--- pmap -x ---" >> "$out"
-      echo "SKIP: pmap not installed" >> "$out"
-    fi
-
-    echo >> "$out"
-    sleep "$HEAVY_SNAPSHOT_INTERVAL_SEC"
-  done
-}
-
-# L3: socket queues/backlog symptoms
-ss_snapshot_monitor() {
-  local out="$DIR_MON/ss_sockets.log"
-  {
-    echo "# started_at=$(date -Is)"
-    echo "# ss -ntpi (established) and ss -lntpi (listening) snapshots"
-    echo
-  } > "$out"
-
-  if ! command -v ss >/dev/null 2>&1; then
-    echo "SKIP: ss not installed" | tee -a "$OUTDIR/monitors_skipped.txt" >/dev/null
-    return 0
-  fi
-
-  while kill -0 "$APP_PID" 2>/dev/null; do
-    echo "### ts=$(date -Is)" >> "$out"
-    ss -ntpi >> "$out" 2>&1 || true
-    echo "---" >> "$out"
-    ss -lntpi >> "$out" 2>&1 || true
-    echo >> "$out"
-    sleep "$NET_SNAPSHOT_INTERVAL_SEC"
-  done
-}
-
-# L3: softirq distribution (NET_RX/NET_TX)
-softirqs_snapshot_monitor() {
-  local out="$DIR_MON/softirqs.log"
-  {
-    echo "# started_at=$(date -Is)"
-    echo "# /proc/softirqs snapshots"
-    echo
-  } > "$out"
-
-  while kill -0 "$APP_PID" 2>/dev/null; do
-    echo "### ts=$(date -Is)" >> "$out"
-    cat /proc/softirqs >> "$out" 2>&1 || true
-    echo >> "$out"
-    sleep "$SOFTIRQ_SNAPSHOT_INTERVAL_SEC"
   done
 }
 
 thread_summary_monitor &
 thread_dump_monitor &
 snapshots_monitor &
-mem_layout_monitor &
-ss_snapshot_monitor &
-softirqs_snapshot_monitor &
-log_meta "snapshot loops started"
+log_meta "thread + snapshots monitors started"
 
 # =========================
 # 6) Vegeta phases + reports
@@ -344,11 +233,11 @@ run_phase() {
   local rate="$2"
   local duration="$3"
 
-  local bin="${DIR_LOAD}/${name}.bin"
-  local rpt_txt="${DIR_LOAD}/${name}.report.txt"
-  local rpt_json="${DIR_LOAD}/${name}.report.json"
-  local rpt_hist="${DIR_LOAD}/${name}.hist.txt"
-  local plot_html="${DIR_LOAD}/${name}.plot.html"
+  local bin="${OUTDIR}/${name}.bin"
+  local rpt_txt="${OUTDIR}/${name}.report.txt"
+  local rpt_json="${OUTDIR}/${name}.report.json"
+  local rpt_hist="${OUTDIR}/${name}.hist.txt"
+  local plot_html="${OUTDIR}/${name}.plot.html"
 
   log "PHASE ${name}: rate=${rate}, duration=${duration}"
   log_meta "load phase start name=${name} rate=${rate} duration=${duration}"
@@ -401,9 +290,10 @@ load_scenario() {
   log "DONE. All artifacts saved to: $OUTDIR"
 }
 
+# run load in background so cleanup can stop it via LOAD_PID
 load_scenario &
 LOAD_PID=$!
-echo "$LOAD_PID" > "$DIR_LOAD/load.pid"
+echo "$LOAD_PID" > "$OUTDIR/load.pid"
 log_meta "load scenario pid=$LOAD_PID"
 
 wait "$LOAD_PID"
